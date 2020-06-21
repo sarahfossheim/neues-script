@@ -5,9 +5,84 @@ tags:
 navtitle: Home
 ---
 
-<h1>Latest Posts</h1>
+<div class="home">
 
-{% set postslist = collections.myPosts %}
-{% include "postslist.njk" %}
+  <section class="home-intro narrow">
+    <h2>{{home.headerTitle}}</h2>
+    <p>
+      {{home.headerDescription}}
+    </p>
+  </section>
 
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+  <section class="home-cta xnarrow">
+    <div>
+      <h2>Learn more about us</h2>
+      <ul>
+        <li><a href="">Our services</a></li>
+        <li><a href="">Past projects</a></li>
+        <li><a href="">What we do</a></li>
+      </ul>
+    </div>
+    <img src={{home.headerImage.url}} alt={{home.headerImage.alt}} />
+  </section>
+
+  <section class="home-projects wide">
+    <h2 class="narrow">{{home.projectsTitle}}</h2>
+    <div class="home-projects-overview wide">
+      {% set postslist = collections.myPosts %}
+      {% for post in postslist | reverse %}
+        {% set currentPost = post.data.post %}
+        <div class="home-project">
+          <h3>{{currentPost.title}}</h3>
+          <p>{{currentPost.excerpt}}</p>
+          <p><a href="{{ post.url | url }}" class="read-more">Read more</a></p>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+   <section class="home-about home-cta narrow">
+    <div>
+      <h2>{{home.aboutTitle}}</h2>
+      <p>{{home.aboutDescription}}</p>
+    </div>
+    <img src={{home.headerImage.url}} alt={{home.headerImage.alt}} />
+  </section>
+
+  <section class="home-services narrow">
+    <h2>{{home.servicesTitle}}</h2>
+    <p class="services-general">{{home.servicesDescription}}</p>
+    <div>
+      <div>
+        <h3>{{home.servicesTitleBlock1Title}}</h3>
+        <p>{{home.servicesTitleBlock1Descr}}</p>
+      </div>
+      <div>
+        <h3>{{home.servicesTitleBlock2Title}}</h3>
+        <p>{{home.servicesTitleBlock2Descr}}</p>
+      </div>
+      <div>
+        <h3>{{home.servicesTitleBlock3Title}}</h3>
+        <p>{{home.servicesTitleBlock3Descr}}</p>
+      </div>
+    </div>
+  </section>
+
+  {# <section class="home-journal wide">
+    <h2>{{home.journalTitle}}</h2>
+  </section> #}
+  <section class="home-projects wide">
+    <h2 class="narrow">{{home.journalTitle}}</h2>
+    <div class="home-projects-overview wide">
+      {% set postslist = collections.myPosts %}
+      {% for post in postslist | reverse %}
+        {% set currentPost = post.data.post %}
+        <div class="home-project">
+          <h3>{{currentPost.title}}</h3>
+          <p>{{currentPost.excerpt}}</p>
+          <p><a href="{{ post.url | url }}" class="read-more">Read more</a></p>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>

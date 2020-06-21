@@ -14,5 +14,8 @@
   },
   "devDependencies": {
     "lerna": "^3.16.4"
+  },
+  "dependencies": {
+    "@sanity/image-url": "^0.140.19"
   }
 }

@@ -1,0 +1,16 @@
+const groq = require('groq')
+const client = require('../utils/sanityClient');
+
+module.exports =  async function() {
+  const homePage =  await client.fetch(groq`
+    *[_type == "homePage"][0]{
+      ...,
+      'headerImage': {
+        'url': headerImage.asset->url,
+        'alt': headerImage.alt
+      }
+    }
+  `);
+  console.log(homePage);
+  return homePage;
+}

@@ -20,19 +20,8 @@ async function getPosts () {
     publishedAt,
     title,
     slug,
-    body[]{
-      ...,
-      children[]{
-        ...,
-        // Join inline reference
-        _type == "authorReference" => {
-          // check /studio/documents/authors.js for more fields
-          "name": @.author->name,
-          "slug": @.author->slug
-        }
-      }
-    },
-    "authors": authors[].author->
+    excerpt,
+    body
   }`
   const order = `| order(publishedAt asc)`
   const query = [filter, projection, order].join(' ')
