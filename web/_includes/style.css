@@ -331,6 +331,11 @@ main {
     position: relative;
 }
 
+.home-projects .home-projects-overview .home-project p a.read-more {
+    padding-left: 1.75rem;
+    color: var(--font-color)
+}
+
 .home-projects .home-projects-overview .home-project p a.read-more:before {
     content: "";
     position: absolute;
@@ -341,6 +346,15 @@ main {
     width: 100%;
     height: 100%;
     z-index: 0;
+}
+
+.home-projects .home-projects-overview .home-project a.read-more:after {
+    content: "→";
+    text-decoration: none;
+    margin-right: 0.75rem;
+    transition: margin 0.3s;
+    position: absolute;
+    left: 2rem;
 }
 
 .home-about .left {
@@ -371,7 +385,7 @@ main {
 }
 
 .home-services .services-cta a {
-    color: var(--accent-color-2);
+    color: #0D825A;
 }
 
 .home-services > div {
@@ -403,7 +417,7 @@ article p, article ul, article ol {
 
 article h1 {
     font-size: 3rem;
-    margin-bottom: 7rem;
+    margin-bottom: 8rem;
 }
 
 article h1:after {
@@ -416,7 +430,7 @@ article h1:after {
     radial-gradient(at top right, var(--accent-color-2) 20%, transparent 20%),
     radial-gradient(at bottom left, var(--accent-color-2) 20%, transparent 20%),
     radial-gradient(at bottom right, var(--accent-color-2) 20%, transparent 20%);
-    background-size: 4px 4px;
+    background-size: 2px 2px;
     position: absolute;
     margin: 2rem 0;
 }
@@ -424,13 +438,14 @@ article h1:after {
 article h2 {
     margin-top: 3rem;
 
-    background-image: linear-gradient(var(--background-color), var(--background-color)), radial-gradient(at top left, var(--accent-color-2) 20%, transparent 20%),
-    radial-gradient(at top right, var(--accent-color-2) 20%, transparent 20%),
-    radial-gradient(at bottom left, var(--accent-color-2) 20%, transparent 20%),
-    radial-gradient(at bottom right, var(--accent-color-2) 20%, transparent 20%);
-    background-size: 100% 100%, 2px 2px;
-    background-repeat: no-repeat, repeat;
-    background-position: 1rem 0, 0 0;
+    background-image: linear-gradient(var(--background-color), var(--background-color)), 
+        radial-gradient(at top left, var(--accent-color-2) 20%, transparent 20%),
+        radial-gradient(at top right, var(--accent-color-2) 20%, transparent 20%),
+        radial-gradient(at bottom left, var(--accent-color-2) 20%, transparent 20%),
+        radial-gradient(at bottom right, var(--accent-color-2) 20%, transparent 20%);
+    background-size: 100% 100%, 2px 2px, 2px 2px, 2px 2px, 2px 2px;
+    background-repeat: no-repeat, repeat, repeat, repeat, repeat;
+    background-position: 1rem 0, 0 0, 0 0, 0 0, 0 0;
     padding-left: 1.5rem;
 }
 
