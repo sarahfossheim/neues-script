@@ -8,6 +8,9 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import post from './documents/post'
 import siteSettings from './documents/siteSettings'
 import home from './documents/home'
+import projects from './documents/projects'
+import about from './documents/about'
+import services from './documents/services'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -26,6 +29,9 @@ export default createSchema({
     siteSettings,
     post,
     home,
+    projects,
+    about,
+    services,
     mainImage,
     bodyPortableText,
     excerptPortableText

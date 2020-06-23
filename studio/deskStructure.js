@@ -2,9 +2,12 @@ import S from '@sanity/desk-tool/structure-builder'
 import MdSettings from 'react-icons/lib/md/settings'
 import MdHome from 'react-icons/lib/md/home'
 import MdLibraryBooks from 'react-icons/lib/md/library-books'
+import MdInfo from 'react-icons/lib/md/info'
+import MdWork from 'react-icons/lib/md/work'
+import MdGroupWork from 'react-icons/lib/md/group-work'
 
 const hiddenDocTypes = listItem =>
-  !['category', 'author', 'post', 'siteSettings', 'homePage'].includes(listItem.getId())
+  !['category', 'author', 'post', 'siteSettings', 'homePage', 'projects', 'services', 'about'].includes(listItem.getId())
 
 export default () =>
   S.list()
@@ -28,6 +31,31 @@ export default () =>
             .schemaType('homePage')
             .documentId('homePage')
             .title('Home Page')
+        ),
+      S.listItem()
+        .title('Projects')
+        .icon(MdWork)
+        .schemaType('projects')
+        .child(S.documentTypeList('projects').title('Projects')),
+      S.listItem()
+        .title('Services')
+        .icon(MdGroupWork)
+        .child(
+          S.editor()
+            .id('services')
+            .schemaType('services')
+            .documentId('services')
+            .title('Services')
+        ),
+      S.listItem()
+        .title('About')
+        .icon(MdInfo)
+        .child(
+          S.editor()
+            .id('about')
+            .schemaType('about')
+            .documentId('about')
+            .title('About')
         ),
       S.listItem()
         .title('Journal')
