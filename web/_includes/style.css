@@ -319,9 +319,19 @@ main {
     margin-top: 10rem;
 }
 
-.home-services .services-general {
+.home-services .services-general{
     font-size: 1.5rem;
     line-height: 2rem;
+}
+
+.home-services .services-cta {
+    margin-bottom: 10rem;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.home-services .services-cta a {
+    color: var(--accent-color-2);
 }
 
 .home-services > div {
@@ -330,7 +340,7 @@ main {
     column-gap: 2rem;
     text-align: center;
     margin-top: 2rem;
-    margin-bottom: 10rem;
+    margin-bottom: 4rem;
 }
 
 .journal, article {
