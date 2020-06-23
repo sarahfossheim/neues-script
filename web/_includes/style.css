@@ -20,6 +20,9 @@ body {
     font-family: 'Inter', Helvetica, sans-serif;
     font-size: 1rem;
     color: var(--font-color);
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 12rem;
 }
 
 ::selection {
@@ -113,6 +116,7 @@ main {
     -moz-user-select: none; 
     -ms-user-select: none; 
     user-select: none; 
+    z-index: 1;
 }
 
 .brand h2:first-child {
@@ -138,8 +142,9 @@ main {
 }
 
 .home h2 {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-family: "Faune", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
     margin-bottom: 1rem;
 }
 
@@ -154,9 +159,10 @@ main {
     font-size: 2.25rem;
 }
 
-.home-intro .arrow {
+.arrow {
     text-align: center;
-    margin: 3rem 0;
+    margin: 0 0 5rem 0;
+    font-size: 2rem;
 }
 
 .home-cta {
@@ -166,9 +172,9 @@ main {
     margin-top: 3rem;
 }
 
-.home-cta div {
+.home-cta .left {
     position: absolute;
-    left: 0;
+    left: 1rem;
     top: 1rem;
     z-index: 1;
     width: 40%;
@@ -176,6 +182,10 @@ main {
 
 .home-cta h2 {
     font-size: 2rem;
+    line-height: 2rem;
+    font-family: "Faune", sans-serif;
+    font-weight: normal;
+    width: 80%;
 }
 
 .home-cta ul {
@@ -196,14 +206,43 @@ main {
     content: "→";
     text-decoration: none;
     margin-right: 0.75rem;
+    transition: margin 0.3s;
 }
 
-.home-cta img {
+.home-cta ul li:hover:before {
+    margin-right: 1rem;
+}
+
+.home-cta .right {
     width: 75%;
     position: absolute;
     right: 1rem;
     top: 0;
     z-index: 0;
+}
+
+.home-cta .right:before {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0.2rem;
+    left: 0.4rem;
+    background: repeating-linear-gradient(
+        45deg,
+        var(--background-color),
+        var(--background-color) 5px,
+        var(--accent-color-2) 5px,
+        var(--accent-color-2) 6px
+    );
+}
+
+.home-cta img {
+    width: 100%;
+    /* position: absolute; */
+    position: relative;
+    right: 0;
 }
 
 .home-projects {
@@ -212,7 +251,8 @@ main {
 
 .home-projects h2 {
     font-weight: 400;
-    font-size: 2.25rem;
+    font-size: 2rem;
+    font-family: "Faune", sans-serif;
 }
 
 .home-projects .home-projects-overview {
@@ -274,7 +314,7 @@ main {
 }
 
 .home-projects .home-projects-overview .home-project h3 {
-    font-weight: 600;
+    font-weight: normal;
     margin-bottom: 1rem;
     font-size: 2rem;
 }
@@ -303,7 +343,7 @@ main {
     z-index: 0;
 }
 
-.home-about div {
+.home-about .left {
     position: absolute;
     top: 3rem;
     left: 1rem;
@@ -352,16 +392,84 @@ article h1, article h2, article h3, article h4, article b, article strong {
     margin-bottom: 1rem;
 }
 
+article h1, article h2, article h2 strong {
+    font-family: "Faune", sans-serif;
+    font-weight: Normal !important;
+}
+
 article p, article ul, article ol {
     margin-bottom: 1rem;
 }
 
 article h1 {
-    font-size: 2rem;
+    font-size: 3rem;
+    margin-bottom: 7rem;
 }
+
+article h1:after {
+    content: " ";
+    display: block;
+    width: 100%;
+    max-width: 333px;
+    height: 0.75rem;
+    background-image: radial-gradient(at top left, var(--accent-color-2) 20%, transparent 20%),
+    radial-gradient(at top right, var(--accent-color-2) 20%, transparent 20%),
+    radial-gradient(at bottom left, var(--accent-color-2) 20%, transparent 20%),
+    radial-gradient(at bottom right, var(--accent-color-2) 20%, transparent 20%);
+    background-size: 4px 4px;
+    position: absolute;
+    margin: 2rem 0;
+}
+
+article h2 {
+    margin-top: 3rem;
+
+    background-image: linear-gradient(var(--background-color), var(--background-color)), radial-gradient(at top left, var(--accent-color-2) 20%, transparent 20%),
+    radial-gradient(at top right, var(--accent-color-2) 20%, transparent 20%),
+    radial-gradient(at bottom left, var(--accent-color-2) 20%, transparent 20%),
+    radial-gradient(at bottom right, var(--accent-color-2) 20%, transparent 20%);
+    background-size: 100% 100%, 2px 2px;
+    background-repeat: no-repeat, repeat;
+    background-position: 1rem 0, 0 0;
+    padding-left: 1.5rem;
+}
+
 
 article a {
     color: #0D825A;
+}
+
+article li, article li {
+    list-style-position: inside;
+}
+
+footer {
+    background-color: #FFFEEC;
+    padding: 3rem;
+    font-size: 0.75rem;
+    margin-top: 5rem;
+    position: absolute;
+    bottom: -1rem;
+    display: block;
+    width: 100%;
+}
+
+footer div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.75fr;
+}
+
+footer h2 {
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+footer section:last-child {
+    text-align: right;
+}
+
+footer ul li {
+    list-style-type: none;
 }
 
 @keyframes brand-left {

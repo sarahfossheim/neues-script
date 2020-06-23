@@ -15,7 +15,7 @@ navtitle: Home
   </section>
 
   <section class="home-cta xnarrow">
-    <div>
+    <div class="left">
       <h2>Learn more about us</h2>
       <ul>
         <li><a href="/services">Our services</a></li>
@@ -23,8 +23,12 @@ navtitle: Home
         <li><a href="/about">What we do</a></li>
       </ul>
     </div>
-    <img src={{home.headerImage.url}} alt={{home.headerImage.alt}} />
+    <div class="right">
+      <img src={{home.headerImage.url}} alt={{home.headerImage.alt}} />
+    </div>
   </section>
+
+  <p class="arrow">↓</p>
 
   <section class="home-projects wide">
     <h2 class="narrow">{{home.projectsTitle}}</h2>
@@ -42,11 +46,13 @@ navtitle: Home
   </section>
 
    <section class="home-about home-cta narrow">
-    <div>
+    <div class="left">
       <h2>{{home.aboutTitle}}</h2>
       <p>{{home.aboutDescription}}</p>
     </div>
-    <img src={{home.headerImage.url}} alt={{home.headerImage.alt}} />
+    <div class="right">
+      <img src={{home.headerImage.url}} alt={{home.headerImage.alt}} />
+    </div>
   </section>
 
   <section class="home-services narrow">

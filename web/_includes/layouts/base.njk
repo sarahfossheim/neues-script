@@ -8,6 +8,7 @@
       {# <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}"> #}
     
     <!-- TODO: Load fonts locally -->
+    <link rel='stylesheet' href='http://www.cnap.graphismeenfrance.fr/faune/styles/faune-fontes.css'>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
     {% set css %}
@@ -41,7 +42,27 @@
     </main>
 
     <footer>
-        {# <p>Footer</p> #}
+        <div class="wide">
+          <section>
+            <h2>Contact</h2>
+            <p>
+              Daniela AT neuescript . com <br />
+              Dietzgenstraße 8 <br />
+              13156 Berlin, Deutschland
+            </p>
+          </section>
+          <section>
+            <h2>Social media</h2>
+            <ul>
+              <li>Twitter</li>
+              <li>LinkedIn</li>
+              <li>Are.na</li>
+            </ul>
+          </section>
+          <section>
+            Placeholder text for privacy statement
+          </section>
+        </div>
     </footer>
   </body>
 </html>
