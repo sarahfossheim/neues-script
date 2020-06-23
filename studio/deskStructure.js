@@ -7,7 +7,7 @@ import MdWork from 'react-icons/lib/md/work'
 import MdGroupWork from 'react-icons/lib/md/group-work'
 
 const hiddenDocTypes = listItem =>
-  !['category', 'author', 'post', 'siteSettings', 'homePage', 'projects', 'services', 'about'].includes(listItem.getId())
+  !['category', 'author', 'post', 'siteSettings', 'homePage', 'projects', 'services', 'about', 'footer'].includes(listItem.getId())
 
 export default () =>
   S.list()
@@ -21,6 +21,15 @@ export default () =>
             .id('siteSettings')
             .schemaType('siteSettings')
             .documentId('siteSettings')
+        ),
+      S.listItem()
+        .title('Footer')
+        .icon(MdSettings)
+        .child(
+          S.editor()
+            .id('footer')
+            .schemaType('footer')
+            .documentId('footer')
         ),
       S.listItem()
         .title('Home Page')

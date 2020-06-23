@@ -11,6 +11,7 @@ import home from './documents/home'
 import projects from './documents/projects'
 import about from './documents/about'
 import services from './documents/services'
+import footer from './documents/footer'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -32,6 +33,7 @@ export default createSchema({
     projects,
     about,
     services,
+    footer,
     mainImage,
     bodyPortableText,
     excerptPortableText
