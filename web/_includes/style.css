@@ -259,7 +259,7 @@ main, header {
     margin: 2rem auto 8rem auto;
 }
 
-.home-projects h2 {
+.home-projects h2, .home-services h2, .home-journal h2  {
     font-weight: 400;
     font-size: 2rem;
     font-family: "Faune", "Inter", sans-serif;
@@ -412,7 +412,7 @@ main, header {
 
 .home-services {
     margin-top: 10rem;
-    background-image: radial-gradient(#6FFFCD 25%, #EBFF6F 50%, rgba(235, 255, 111, 0) 70%);
+    background-image: radial-gradient(#BFFF6F 25%, #EBFF6F 50%, rgba(235, 255, 111, 0) 70%);
     background-size: 20vw 20vw;
     background-position: 0 20%;
     background-repeat: no-repeat;
@@ -503,6 +503,37 @@ article li, article li {
     list-style-position: inside;
 }
 
+article blockquote {
+    font-size: 2rem;
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.filters .categories {
+    position: relative;
+    top: 0.75rem;
+}
+
+.filters .categories li:nth-child(1n) {
+    background-color: #FFE86E;
+}
+
+.filters .categories li:nth-child(2n) {
+    background-color: #BFFF6F;
+}
+
+.filters .categories li:nth-child(3n) {
+    background-color: #FF9A6F;
+}
+
+.filters .categories li:nth-child(4n) {
+    background-color: #6FFFCD;
+}
+
+
 .journal h2 {
    margin-bottom: 1rem;
    font-weight: 400;
@@ -546,6 +577,61 @@ article li, article li {
 
 .journal-overview .journal-entry .read-more a {
     color: #0D825A;
+}
+
+.home-journal .home-journal-entry h3 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.home-journal .home-journal-overview {
+    margin-top: 2rem;
+}
+
+.home-journal .home-journal-entry {
+    padding: 2rem 0 3rem 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--font-color);
+}
+
+.categories li {
+    list-style-type: none;
+    display: inline;
+    padding: 0.25rem 0.5rem;
+    background-color: lemonchiffon;
+    border-radius: 2rem;
+    margin-right: 1rem;
+    font-size: 0.75rem;
+}
+
+.home-journal .home-journal-entry .categories {
+    margin-bottom: 1.5rem;
+}
+
+.home-journal .home-journal-entry p {
+    line-height: 1.5rem;
+}
+
+.home-journal .home-journal-entry p.posts-cta {
+    margin-top: 1rem;
+    display: block;
+    padding-left: 1.5rem;
+    transition: padding 0.35s;
+    position: relative;
+}
+
+.home-journal .home-journal-entry p.posts-cta:hover {
+    padding-left: 2rem;
+}
+
+.home-journal .home-journal-entry p.posts-cta a {
+    color: var(--font-color);
+}
+
+.home-journal .home-journal-entry p.posts-cta:before {
+    content: "→";
+    position: absolute;
+    left: 0rem;
 }
 
 footer {
@@ -625,16 +711,16 @@ footer ul li {
         background-position: 10% 30%;
     }
     20% {
-        background-position: 40% 70%;
+        background-position: 40% 80%;
     }
     40% {
-        background-position: 60% 10%;
+        background-position: 90% 10%;
     }
     60% {
-        background-position: 30% 50%;
+        background-position: 30% 70%;
     }
     100% {
-        background-position: 10% 30%;
+        background-position: 10% 30%; 
     }
 }
 

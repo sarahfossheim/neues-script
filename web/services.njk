@@ -4,6 +4,8 @@ navtitle: Services
 permalink: /services/
 ---
 
-<h1>Services</h1>
+<article class="narrow">
+<h1>{{services.title}}</h1>
 
-<p>Under construction</p>
+{{ services.body | markdownify | safe }}
+</article>

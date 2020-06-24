@@ -4,6 +4,8 @@ navtitle: About
 permalink: /about/
 ---
 
-<h1>About</h1>
+<article class="narrow">
+<h1>{{about.title}}</h1>
 
-<p>Under construction</p>
+{{ about.body | markdownify | safe }}
+</article>

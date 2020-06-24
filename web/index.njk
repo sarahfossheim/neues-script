@@ -77,22 +77,25 @@ navtitle: Home
     <p class="services-cta"><a href="/services">Learn more about our services</a></p>
   </section>
 
-  <section class="journal wide">
+  <section class="home-journal narrow wide">
     <h2 class="narrow">{{home.journalTitle}}</h2>
-    <ul class="journal-overview wide">
+    <div class="home-journal-overview narrow">
         {% set postslist = collections.myPosts %}
         {% for post in postslist | reverse %}
         {% set currentPost = post.data.post %}
-        <li class="journal-entry">
-            <span>{{currentPost.title}}</span>
-            <span class="tags">
-                {% for cat in currentPost.categories %}
-                    <span class="tag">{{cat}}</span>
-                {% endfor %}
-            </span>
-            <span class="read-more"><a href="{{ post.url | url }}" class="read-more">Read more</a></span>
-        </li>
+          <div class="home-journal-entry">
+            <h3>{{currentPost.title}}</h3>
+            <ul class="categories">
+              {% for cat in currentPost.categories | reverse %}
+                <li>{{cat}}</li>
+              {% endfor %}
+            </ul>
+            <p>{{currentPost.excerpt}}</p>
+            <p class="posts-cta"><a href="" >Read more</a></p>
+            {# <p>{{currentPost.publishedAt}}</p> #}
+          </div>
         {% endfor %}
-    </ul>
-</section>
+    </div>
+  </section>
 </div>
+

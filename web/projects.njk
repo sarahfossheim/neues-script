@@ -4,20 +4,18 @@ navtitle: Projects
 permalink: /projects/
 ---
 
-<p>Under construction</p>
-
-{# <div class="journal">
-    <section class="home-projects wide">
-        <div class="home-projects-overview wide">
-        {% set projectlist = collections.projects %}
-        {% for project in projectlist | reverse %}
-            {% set currentProject = project.data.project %}
-            <div class="home-project">
+<section class="home-projects wide">
+    <div class="home-projects-overview wide">
+      {% set projectlist = collections.projects %}
+      {% for project in projectlist | reverse %}
+        {% set currentProject = project.data.project %}
+        <div class="home-project-wrapper">
+          <div class="home-project">
             <h3>{{currentProject.title}}</h3>
             <p>{{currentProject.excerpt}}</p>
             <p><a href="{{ project.url | url }}" class="read-more">Read more</a></p>
-            </div>
-        {% endfor %}
+          </div>
         </div>
-    </section>
-</div> #}
+      {% endfor %}
+    </div>
+  </section>
