@@ -15,6 +15,5 @@ module.exports =  async function() {
       }
     }
   `);
-  console.log(homePage);
   return homePage;
 }

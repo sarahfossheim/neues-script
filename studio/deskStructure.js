@@ -30,6 +30,7 @@ export default () =>
             .id('footer')
             .schemaType('footer')
             .documentId('footer')
+            .title('Footer')
         ),
       S.listItem()
         .title('Home Page')

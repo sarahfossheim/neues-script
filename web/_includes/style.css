@@ -63,6 +63,11 @@ header h1 {
     font-size: 2rem;
 }
 
+header h1 a {
+    color: var(--font-color);
+    text-decoration: none;
+}
+
 header nav ul {
     text-align: right;
     margin-top: 0.75rem;
@@ -477,6 +482,7 @@ footer {
 footer div {
     display: grid;
     grid-template-columns: 1fr 1fr 0.75fr;
+    column-gap: 4rem;
 }
 
 footer h2 {

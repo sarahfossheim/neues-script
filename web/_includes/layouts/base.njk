@@ -21,7 +21,7 @@
   </head>
   <body>
     <header class="wide">
-      <h1>Neues Script</h1>
+      <h1><a href="/">Neues Script</a></h1>
       <nav>
         <ul>
           <li><a href="/">Home</a></li>
@@ -45,11 +45,12 @@
     <footer>
         <div class="wide">
           <section>
+            {{footer.privacy}} 
+          </section>
+          <section>
             <h2>Contact</h2>
             <p>
-              Daniela AT neuescript . com <br />
-              Dietzgenstraße 8 <br />
-              13156 Berlin, Deutschland
+              {{footer.contact}}
             </p>
           </section>
           <section>
@@ -59,9 +60,6 @@
               <li>LinkedIn</li>
               <li>Are.na</li>
             </ul>
-          </section>
-          <section>
-            Placeholder text for privacy statement
           </section>
         </div>
     </footer>
