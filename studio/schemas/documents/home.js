@@ -32,7 +32,7 @@ export default {
     {
       name: 'aboutImage',
       type: 'mainImage',
-      title: '2️⃣ About us: Image'
+      title: '2️⃣ About us: Image '
     },
     {
       name: 'aboutDescription',

@@ -15,12 +15,21 @@ export default {
       options: {
         isHighlighted: true
       }
+    },
+    {
+      name: 'caption',
+      type: 'text',
+      title: 'Caption',
+      options: {
+        isHighlighted: true
+      }
     }
   ],
   preview: {
     select: {
       imageUrl: 'asset.url',
-      title: 'alt'
+      title: 'alt',
+      caption: 'caption'
     }
   }
 }
