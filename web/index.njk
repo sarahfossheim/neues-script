@@ -36,10 +36,12 @@ navtitle: Home
       {% set postslist = collections.myPosts %}
       {% for post in postslist | reverse %}
         {% set currentPost = post.data.post %}
-        <div class="home-project">
-          <h3>{{currentPost.title}}</h3>
-          <p>{{currentPost.excerpt}}</p>
-          <p><a href="{{ post.url | url }}" class="read-more">Read more</a></p>
+        <div class="home-project-wrapper">
+          <div class="home-project">
+            <h3>{{currentPost.title}}</h3>
+            <p>{{currentPost.excerpt}}</p>
+            <p><a href="{{ post.url | url }}" class="read-more">Read more</a></p>
+          </div>
         </div>
       {% endfor %}
     </div>
