@@ -33,14 +33,14 @@ navtitle: Home
   <section class="home-projects wide">
     <h2 class="narrow">{{home.projectsTitle}}</h2>
     <div class="home-projects-overview wide">
-      {% set postslist = collections.myPosts %}
-      {% for post in postslist | reverse %}
-        {% set currentPost = post.data.post %}
+      {% set projectlist = collections.projects %}
+      {% for project in projectlist | reverse %}
+        {% set currentProject = project.data.project %}
         <div class="home-project-wrapper">
           <div class="home-project">
-            <h3>{{currentPost.title}}</h3>
-            <p>{{currentPost.excerpt}}</p>
-            <p><a href="{{ post.url | url }}" class="read-more">Read more</a></p>
+            <h3>{{currentProject.title}}</h3>
+            <p>{{currentProject.excerpt}}</p>
+            <p><a href="{{ project.url | url }}" class="read-more">Read more</a></p>
           </div>
         </div>
       {% endfor %}
@@ -77,21 +77,22 @@ navtitle: Home
     <p class="services-cta"><a href="/services">Learn more about our services</a></p>
   </section>
 
-  {# <section class="home-journal wide">
-    <h2>{{home.journalTitle}}</h2>
-  </section> #}
-  <section class="home-projects wide">
+  <section class="journal wide">
     <h2 class="narrow">{{home.journalTitle}}</h2>
-    <div class="home-projects-overview wide">
-      {% set postslist = collections.myPosts %}
-      {% for post in postslist | reverse %}
+    <ul class="journal-overview wide">
+        {% set postslist = collections.myPosts %}
+        {% for post in postslist | reverse %}
         {% set currentPost = post.data.post %}
-        <div class="home-project">
-          <h3>{{currentPost.title}}</h3>
-          <p>{{currentPost.excerpt}}</p>
-          <p><a href="{{ post.url | url }}" class="read-more">Read more</a></p>
-        </div>
-      {% endfor %}
-    </div>
-  </section>
+        <li class="journal-entry">
+            <span>{{currentPost.title}}</span>
+            <span class="tags">
+                {% for cat in currentPost.categories %}
+                    <span class="tag">{{cat}}</span>
+                {% endfor %}
+            </span>
+            <span class="read-more"><a href="{{ post.url | url }}" class="read-more">Read more</a></span>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
 </div>

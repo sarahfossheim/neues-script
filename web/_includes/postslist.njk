@@ -1,6 +1,6 @@
 <section class="home-projects wide">
     <div class="home-projects-overview wide">
-      {% set postslist = collections.myPosts %}
+      {% set postslist = collections.posts %}
       {% for post in postslist | reverse %}
         {% set currentPost = post.data.post %}
         <div class="home-project">

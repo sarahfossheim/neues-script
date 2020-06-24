@@ -412,6 +412,11 @@ main, header {
 
 .home-services {
     margin-top: 10rem;
+    background-image: radial-gradient(#6FFFCD 25%, #EBFF6F 50%, rgba(235, 255, 111, 0) 70%);
+    background-size: 20vw 20vw;
+    background-position: 0 20%;
+    background-repeat: no-repeat;
+    animation: animate-body 30s ease-in-out infinite;
 }
 
 .home-services .services-general{
@@ -420,7 +425,6 @@ main, header {
 }
 
 .home-services .services-cta {
-    margin-bottom: 10rem;
     text-align: center;
     font-size: 1.25rem;
 }
@@ -438,7 +442,7 @@ main, header {
     margin-bottom: 4rem;
 }
 
-.journal, article {
+article {
     margin-top: 11rem;
 }
 
@@ -499,6 +503,51 @@ article li, article li {
     list-style-position: inside;
 }
 
+.journal h2 {
+   margin-bottom: 1rem;
+   font-weight: 400;
+   font-family: "Faune", "Inter", sans-serif;
+}
+
+.journal-overview .journal-entry {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 0.5fr;
+    column-gap: 2.5rem;
+    border-bottom: 1px solid var(--font-color);
+    padding: 1rem 0.5rem;
+}
+
+.journal-overview .journal-entry:last-child {
+    border: none;
+}
+
+.journal-overview .journal-entry span:first-child {
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    white-space: nowrap;
+}
+
+.journal-overview .journal-entry .tags {
+    text-align: right;
+}
+
+.journal-overview .journal-entry .tag {
+    font-size: 0.75rem;
+    background-color: var(--accent-color-2);
+    border-radius: 1rem;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.journal-overview .journal-entry .read-more {
+    text-align: right;
+}
+
+.journal-overview .journal-entry .read-more a {
+    color: #0D825A;
+}
+
 footer {
     background-color: #FFFEEC;
     padding: 3rem;
@@ -553,7 +602,7 @@ footer ul li {
     }
 }
 
-@keyframes animate-body {
+/* @keyframes animate-body {
     0% {
         background-position: -100px 300px;
     }
@@ -568,6 +617,24 @@ footer ul li {
     }
     100% {
         background-position: -100px 300px;
+    }
+} */
+
+@keyframes animate-body {
+    0% {
+        background-position: 10% 30%;
+    }
+    20% {
+        background-position: 40% 70%;
+    }
+    40% {
+        background-position: 60% 10%;
+    }
+    60% {
+        background-position: 30% 50%;
+    }
+    100% {
+        background-position: 10% 30%;
     }
 }
 
@@ -658,5 +725,13 @@ footer ul li {
 
     .home-cta {
         min-height: 100px;
+    }
+
+    .journal-overview .journal-entry {
+        grid-template-columns: 1fr;
+    }
+
+    .journal-overview .journal-entry > * {
+        text-align: left;
     }
 }

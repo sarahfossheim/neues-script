@@ -4,18 +4,21 @@ navtitle: Journal
 permalink: /journal/
 ---
 
-<div class="journal">
-    <section class="home-projects wide">
-        <div class="home-projects-overview wide">
+<section class="journal wide">
+    <h2 class="narrow">{{home.journalTitle}}</h2>
+    <ul class="journal-overview wide">
         {% set postslist = collections.myPosts %}
         {% for post in postslist | reverse %}
-            {% set currentPost = post.data.post %}
-            <div class="home-project">
-            <h3>{{currentPost.title}}</h3>
-            <p>{{currentPost.excerpt}}</p>
-            <p><a href="{{ post.url | url }}" class="read-more">Read more</a></p>
-            </div>
+        {% set currentPost = post.data.post %}
+        <li class="journal-entry">
+            <span>{{currentPost.title}}</span>
+            <span class="tags">
+                {% for cat in currentPost.categories %}
+                    <span class="tag">{{cat}}</span>
+                {% endfor %}
+            </span>
+            <span class="read-more"><a href="{{ post.url | url }}" class="read-more">Read more</a></span>
+        </li>
         {% endfor %}
-        </div>
-    </section>
-</div>
+    </ul>
+</section>
