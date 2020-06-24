@@ -30,6 +30,11 @@ export default {
       title: '2️⃣ About us: Title'
     },
     {
+      name: 'aboutImage',
+      type: 'mainImage',
+      title: '2️⃣ About us: Image'
+    },
+    {
       name: 'aboutDescription',
       type: 'text',
       title: '2️⃣ About us: Description'

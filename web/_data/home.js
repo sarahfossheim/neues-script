@@ -8,6 +8,10 @@ module.exports =  async function() {
       'headerImage': {
         'url': headerImage.asset->url,
         'alt': headerImage.alt
+      },
+      'aboutImage': {
+        'url': aboutImage.asset->url,
+        'alt': aboutImage.alt
       }
     }
   `);
