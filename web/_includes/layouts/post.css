@@ -115,3 +115,15 @@ article hr {
 .resources a {
     color: var(--font-color);
 }
+
+@media screen and (max-width: 900px) {
+    .image-gallery {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+    }
+
+    .image-gallery *:nth-child(3n) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+}
