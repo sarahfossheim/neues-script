@@ -7,6 +7,7 @@ module.exports = {
     code: ({node}) =>
       '```' + node.language + '\n' + node.code + '\n```',
     mainImage: ({node}) => `![${node.alt}](${imageUrl(node).url()})`,
-    file: ({node}) => ''
+    file: ({node}) => '',
+    video: ({node}) => `<iframe width="100%" height="400px" src="${node.href}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
   }
 }
