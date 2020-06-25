@@ -46,11 +46,6 @@ export default {
     {
       type: 'mainImage',
       options: {hotspot: true}
-    },
-    {
-      type: 'file',
-      title: 'Video',
-      description: 'Insert a video file using the MP4 format'
     }
   ]
 }

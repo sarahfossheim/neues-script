@@ -4,6 +4,8 @@ templateClass: tmpl-project
 ---
 <article class="narrow">
   <h1>{{ project.title }}</h1>
+  {{ project.intro | markdownify | safe }} 
   {{ project.body | markdownify | safe }}
   <p><a href="{{ '/' | url }}">← Home</a></p>
 </article>
+

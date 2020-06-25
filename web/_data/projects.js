@@ -8,7 +8,8 @@ const hasToken = !!client.config().token
 function generatePost (post) {
   return {
     ...post,
-    body: BlocksToMarkdown(post.body, { serializers, ...client.config() })
+    body: BlocksToMarkdown(post.body, { serializers, ...client.config() }),
+    intro: BlocksToMarkdown(post.intro, { serializers, ...client.config() })
   }
 }
 
@@ -22,7 +23,8 @@ async function getPosts () {
     slug,
     excerpt,
     categories,
-    body
+    body,
+    intro
   }`
   const order = `| order(publishedAt asc)`
   const query = [filter, projection, order].join(' ')
