@@ -88,6 +88,16 @@ h1, h2, h3, h4, h5 {
     /* animation: brand-right 10s none infinite; */
 }
 
+.large-text {
+    font-size: var(--font-size-xlarge);
+    line-height: 135%;
+}
+
+.medium-text {
+    font-size: var(--font-size-large);
+    line-height: 135%;
+}
+
 @keyframes brand-left {
     0% {
         top: 200px;

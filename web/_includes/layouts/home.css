@@ -5,12 +5,6 @@
     margin-bottom: 0.5rem;
 }
 
-.large-text {
-    font-size: var(--font-size-xlarge);
-    line-height: 135%;
-}
-
-
 .home .cta-block {
     display: block;
     position: relative;

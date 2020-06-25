@@ -9,7 +9,9 @@ function generatePost (post) {
   return {
     ...post,
     body: BlocksToMarkdown(post.body, { serializers, ...client.config() }),
-    intro: BlocksToMarkdown(post.intro, { serializers, ...client.config() })
+    intro: BlocksToMarkdown(post.intro, { serializers, ...client.config() }),
+    coverImages: BlocksToMarkdown(post.coverImages, { serializers, ...client.config() }),
+    storyboard: BlocksToMarkdown(post.storyboard, { serializers, ...client.config() }),
   }
 }
 
@@ -25,7 +27,10 @@ async function getPosts () {
     excerpt,
     categories,
     body,
-    intro
+    intro,
+    coverImages,
+    storyboard,
+    resources
   }`
   const order = `| order(publishedAt asc)`
   const query = [filter, projection, order].join(' ')
