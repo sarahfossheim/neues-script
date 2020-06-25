@@ -4,18 +4,13 @@ navtitle: Projects
 permalink: /projects/
 ---
 
-<section class="home-projects wide">
-    <div class="home-projects-overview wide">
-      {% set projectlist = collections.projects %}
-      {% for project in projectlist | reverse %}
-        {% set currentProject = project.data.project %}
-        <div class="home-project-wrapper">
-          <div class="home-project">
-            <h3>{{currentProject.title}}</h3>
-            <p>{{currentProject.excerpt}}</p>
-            <p><a href="{{ project.url | url }}" class="read-more">Read more</a></p>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  </section>
+<div class="projects-page">
+  <div class="narrow">
+    <h2>Projects</h2>
+    <p class="large-text">Information about our projects, placeholder text for now. We support authors, researchers, academics, policy-makers, and communication & knowledge managers inside organisations and across sectors. </p>
+  </div>
+
+  <div class="wide">
+    {% include "components/projectList.njk" %}
+  </div>
+</p>

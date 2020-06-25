@@ -1,0 +1,26 @@
+<div class="wide">
+    <section>
+    {{footer.privacy}} 
+    </section>
+    <section>
+    <h2>Contact</h2>
+    <p>
+        {{footer.contact}}
+    </p>
+    </section>
+    <section>
+    <h2>Social media</h2>
+    <ul>
+        <li>Twitter</li>
+        <li>LinkedIn</li>
+        <li>Are.na</li>
+    </ul>
+    </section>
+</div>
+
+{% set css %}
+    {% include "components/footer.css" %}
+{% endset %}
+<style>
+    {{ css | cssmin | safe }}
+</style>

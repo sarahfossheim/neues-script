@@ -6,15 +6,14 @@ navtitle: Home
 ---
 
 <div class="home">
-
-  <section class="home-intro narrow">
-    <h2>{{home.headerTitle}}</h2>
-    <p>
+  <section class="intro narrow">
+    <h1>{{home.headerTitle}}</h1>
+    <p class="large-text">
       {{home.headerDescription}}
     </p>
   </section>
 
-  <section class="home-cta xnarrow">
+  <section class="cta-block xnarrow">
     <div class="left">
       <h2>Learn more about us</h2>
       <ul>
@@ -27,27 +26,15 @@ navtitle: Home
       <img src={{home.headerImage.url}} alt={{home.headerImage.alt}} />
     </div>
   </section>
-
-  <p class="arrow">↓</p>
-
-  <section class="home-projects wide">
-    <h2 class="narrow">{{home.projectsTitle}}</h2>
-    <div class="home-projects-overview wide">
-      {% set projectlist = collections.projects %}
-      {% for project in projectlist | reverse %}
-        {% set currentProject = project.data.project %}
-        <div class="home-project-wrapper">
-          <div class="home-project">
-            <h3>{{currentProject.title}}</h3>
-            <p>{{currentProject.excerpt}}</p>
-            <p><a href="{{ project.url | url }}" class="read-more">Read more</a></p>
-          </div>
-        </div>
-      {% endfor %}
+  
+  <section class="projects">
+    <div class="wide">
+      <h2 class="narrow">{{home.projectsTitle}}</h2>
+      {% include "components/projectList.njk" %}
     </div>
   </section>
 
-   <section class="home-about home-cta narrow">
+  <section class="cta-block narrow">
     <div class="left">
       <h2>{{home.aboutTitle}}</h2>
       <p>{{home.aboutDescription}}</p>
@@ -57,10 +44,10 @@ navtitle: Home
     </div>
   </section>
 
-  <section class="home-services narrow">
+  <section class="services narrow">
     <h2>{{home.servicesTitle}}</h2>
-    <p class="services-general">{{home.servicesDescription}}</p>
-    <div>
+    <p class="large-text">{{home.servicesDescription}}</p>
+    <div class="services-detail">
       <div>
         <h3>{{home.servicesTitleBlock1Title}}</h3>
         <p>{{home.servicesTitleBlock1Descr}}</p>
@@ -74,46 +61,13 @@ navtitle: Home
         <p>{{home.servicesTitleBlock3Descr}}</p>
       </div>
     </div>
-    <p class="services-cta"><a href="/services">Learn more about our services</a></p>
+    <p class="read-more"><a href="/services">Read more about our services</a></p>
   </section>
 
-  {# <section class="home-journal narrow wide">
-    <h2 class="narrow">{{home.journalTitle}}</h2>
-    <div class="home-journal-overview narrow">
-        {% set postslist = collections.myPosts %}
-        {% for post in postslist | reverse %}
-        {% set currentPost = post.data.post %}
-          <div class="home-journal-entry">
-            <h3>{{currentPost.title}}</h3>
-            <ul class="categories">
-              {% for cat in currentPost.categories | reverse %}
-                <li>{{cat}}</li>
-              {% endfor %}
-            </ul>
-            <p>{{currentPost.excerpt}}</p>
-            <p class="posts-cta"><a href="" >Read more</a></p>
-          </div>
-        {% endfor %}
+  <section class="journal">
+    <div class="narrow">
+      <h2>{{home.journalTitle}}</h2>
+      {% include "components/postArray.njk" %}
     </div>
-  </section> #}
-
-  <section class="journal narrow">
-    <h2 class="">{{home.journalTitle}}</h2>
-    <ul class="journal-overview">
-        {% set postslist = collections.myPosts %}
-        {% for post in postslist | reverse %}
-        {% set currentPost = post.data.post %}
-        <li class="journal-entry">
-            <span>{{currentPost.title}}</span>
-            <span class="tags">
-                {% for cat in currentPost.categories %}
-                    <span class="tag">{{cat}}</span>
-                {% endfor %}
-            </span>
-            <span class="read-more"><a href="{{ post.url | url }}" class="read-more">Read more</a></span>
-        </li>
-        {% endfor %}
-    </ul>
-</section> 
+  </section>
 </div>
-

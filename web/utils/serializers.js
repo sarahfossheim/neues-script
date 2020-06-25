@@ -7,6 +7,6 @@ module.exports = {
     code: ({node}) =>
       '```' + node.language + '\n' + node.code + '\n```',
     mainImage: ({node}) => `![${node.alt}](${imageUrl(node).width(600).url()})`,
-    file: ({node}) => 'test',
+    file: ({node}) => ''
   }
 }

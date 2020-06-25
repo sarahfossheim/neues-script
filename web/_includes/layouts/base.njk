@@ -9,10 +9,11 @@
     
     <!-- TODO: Load fonts locally -->
     {# <link rel='stylesheet' href='https://www.cnap.graphismeenfrance.fr/faune/styles/faune-fontes.css'> #}
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
 
     {% set css %}
       {% include "fonts.css" %}
+      {% include "variables.css" %}
       {% include "style.css" %}
     {% endset %}
     <style>
@@ -20,48 +21,19 @@
     </style>
   </head>
   <body>
-    <header class="wide">
-      <h1><a href="/">Neues Script</a></h1>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/projects">Projects</a></li>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/journal">Journal</a></li>
-        </ul>
-      </nav>
-    </header>
+    {% include "components/header.njk" %}
 
     <div class="brand" aria-hidden="true">
       <h2>Neues</h2>
       <h2>Script</h2>
     </div>
 
-    <main class="wide">
+    <main>
       {{ content | safe }}
     </main>
 
     <footer>
-        <div class="wide">
-          <section>
-            {{footer.privacy}} 
-          </section>
-          <section>
-            <h2>Contact</h2>
-            <p>
-              {{footer.contact}}
-            </p>
-          </section>
-          <section>
-            <h2>Social media</h2>
-            <ul>
-              <li>Twitter</li>
-              <li>LinkedIn</li>
-              <li>Are.na</li>
-            </ul>
-          </section>
-        </div>
+        {% include "components/footer.njk" %}
     </footer>
   </body>
 </html>

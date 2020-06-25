@@ -12,7 +12,6 @@ function generateBody (post) {
 
 async function getPosts () {
   const services = await client.fetch(groq`*[_type == "services"][0]`)
-  console.log(services)
   return generateBody(services)
 }
 

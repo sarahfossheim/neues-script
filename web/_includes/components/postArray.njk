@@ -1,0 +1,27 @@
+<div class="posts-overview">
+    {% set postslist = collections.myPosts %}
+    {% for post in postslist %}
+    {% set currentPost = post.data.post %}
+        <div class="post">
+            <div class="left">
+                <h3>{{currentPost.title}}</h3>
+                <p>
+                {{currentPost.publishedAt}} · 
+                {% for cat in currentPost.categories %}
+                    <span class="category">{{cat}}</span> 
+                {% endfor %}
+                </p>
+            </div>
+            <div class="right">
+                <p class="read-more"><a href="{{ post.url | url }}" class="read-more">Read more</a></p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% set css %}
+    {% include "components/postArray.css" %}
+{% endset %}
+<style>
+    {{ css | cssmin | safe }}
+</style>
