@@ -6,12 +6,14 @@ export default {
     {
       name: 'title',
       type: 'string',
-      title: 'Title'
+      title: 'Title',
+      description: 'This is the category that will be displayed on posts and projects'
     },
     {
-      name: 'description',
-      type: 'text',
-      title: 'Description'
+      name: 'color',
+      type: 'string',
+      title: 'Color',
+      description: 'This will be used to highlight the category, make sure to go for a color that has a contrast ratio of at least AA (compared to the main font color, #083626).'
     }
   ]
 }

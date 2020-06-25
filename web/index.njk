@@ -30,6 +30,7 @@ navtitle: Home
   <section class="projects">
     <div class="wide">
       <h2 class="narrow">{{home.projectsTitle}}</h2>
+      {% set projectlist = collections.projects | getSelectedProjects %}
       {% include "components/projectList.njk" %}
     </div>
   </section>
@@ -67,6 +68,7 @@ navtitle: Home
   <section class="journal">
     <div class="narrow">
       <h2>{{home.journalTitle}}</h2>
+      {% set postslist = collections.myPosts.slice(0,home.journalLimit) %}
       {% include "components/postArray.njk" %}
     </div>
   </section>

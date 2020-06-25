@@ -18,6 +18,7 @@ async function getPosts () {
   const filter = groq`*[_type == "projects"]`
   const projection = groq`{
     _id,
+    selected,
     publishedAt,
     title,
     slug,
