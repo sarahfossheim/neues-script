@@ -16,18 +16,18 @@
     height: 100%;
     border-radius: 0.5rem;
     padding: 3rem;
-    background-color: var(--project-background);
+    background: var(--project-background);
     position: relative;
     top: 0;
     left: 0;
     transition: border 0.25s, background-color 0.25s, background-position 0.5s, transform 0.5s, top 0.5s, left 0.5s, border-radius 0.5s;
-    background-image: linear-gradient(var(--category-color) 0.5rem, transparent 0.5rem);
+    background-image: linear-gradient(var(--category-color) 0.65rem, transparent 0.65rem);
     background-position: 0 -1rem;
     background-repeat: no-repeat;
 }
 
 .project-overview .project:hover {
-    background-color: var(--shadow-color);
+    background: var(--shadow-color);
     border-radius: 0.65rem;
     animation: project-hover 0.75s ease-in-out forwards;
 }
@@ -40,7 +40,6 @@
     border-radius: 0.8rem;
     background-position: 0 0;
     animation: project-wrapper-hover 0.75s ease-in-out forwards;
-    border: 1px solid var(--project-border);
 }
 
 .project-overview .project h3 {
@@ -85,10 +84,15 @@
     margin-top: 6rem;
     margin-bottom: 5rem;
 
-    --shadow-color: #F1EFEC;
+    --shadow-color: repeating-linear-gradient(
+        45deg,
+        #FFFBF8,
+        #FFFBF8 5px,
+        #FF9A6E 5px,
+        #FF9A6E 6px
+    );
     --project-background: #FFF9F3;
     --brand-color-3: #FFF9F3;
-    --project-border: #EFEDEA;
 }
 
 @media screen and (max-width: 900px) {
