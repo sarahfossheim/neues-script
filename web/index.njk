@@ -26,6 +26,13 @@ navtitle: Home
       <img src={{home.headerImage.url}} alt={{home.headerImage.alt}} />
     </div>
   </section>
+  
+  <section class="projects">
+    <div class="wide">
+      <h2 class="narrow">{{home.projectsTitle}}</h2>
+      {% include "components/projectList.njk" %}
+    </div>
+  </section>
 
   <section class="cta-block narrow">
     <div class="left">
