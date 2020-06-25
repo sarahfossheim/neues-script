@@ -8,8 +8,51 @@ navtitle: Home
 <div class="home">
   <section class="intro narrow">
     <h1>{{home.headerTitle}}</h1>
-    <p>
+    <p class="large-text">
       {{home.headerDescription}}
     </p>
+  </section>
+
+  <section class="cta-block xnarrow">
+    <div class="left">
+      <h2>Learn more about us</h2>
+      <ul>
+        <li><a href="/services">Our services</a></li>
+        <li><a href="/projects">Past projects</a></li>
+        <li><a href="/about">What we do</a></li>
+      </ul>
+    </div>
+    <div class="right">
+      <img src={{home.headerImage.url}} alt={{home.headerImage.alt}} />
+    </div>
+  </section>
+
+  <section class="cta-block narrow">
+    <div class="left">
+      <h2>{{home.aboutTitle}}</h2>
+      <p>{{home.aboutDescription}}</p>
+    </div>
+    <div class="right">
+      <img src={{home.aboutImage.url}} alt={{home.aboutImage.alt}} />
+    </div>
+  </section>
+
+  <section class="services narrow">
+    <h2>{{home.servicesTitle}}</h2>
+    <p class="large-text">{{home.servicesDescription}}</p>
+    <div class="services-detail">
+      <div>
+        <h3>{{home.servicesTitleBlock1Title}}</h3>
+        <p>{{home.servicesTitleBlock1Descr}}</p>
+      </div>
+      <div>
+        <h3>{{home.servicesTitleBlock2Title}}</h3>
+        <p>{{home.servicesTitleBlock2Descr}}</p>
+      </div>
+      <div>
+        <h3>{{home.servicesTitleBlock3Title}}</h3>
+        <p>{{home.servicesTitleBlock3Descr}}</p>
+      </div>
+    </div>
   </section>
 </div>

@@ -1,12 +1,118 @@
 .home .intro h1 {
     font-size: var(--font-size-medium);
     font-size: 1.2rem;
-    font-family: "Faune", "Inter", "HelveticaNeue", Helvetica, sans-serif;
     font-weight: 400;
     margin-bottom: 0.5rem;
 }
 
-.home .intro p {
+.large-text {
     font-size: var(--font-size-xlarge);
     line-height: 135%;
+}
+
+.home .cta-block {
+    display: block;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 4rem;
+}
+
+.home .cta-block .left {
+    float: left;
+    width: 40%;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    z-index: 1;
+}
+
+.home .cta-block .left.left-text {
+    width: 60%;
+}
+
+.home .cta-block .right {
+    float: right;
+    width: 80%;
+}
+
+.home .cta-block .right:before {
+    content: " ";
+    display: block;
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: 0.2rem;
+    right: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        var(--background-color),
+        var(--background-color) 5px,
+        var(--brand-color-1) 5px,
+        var(--brand-color-1) 6px
+    );
+}
+
+.home .cta-block .right img {
+    width: 100%;
+    position: relative;
+    right: 0.2rem;
+}
+
+.home .cta-block h2 {
+    font-size: var(--font-size-xxlarge);
+    line-height: 105%;
+    margin-top: 0;
+}
+
+.home .cta-block .left ul, .home .cta-block .left p {
+    width: 100%;
+    background-color: var(--brand-color-1-dark);
+    padding: 2rem;
+    position: relative;
+    top: 1rem;
+    list-style-type: none;
+}
+
+.home .cta-block .left ul li {
+    margin-bottom: 1rem;
+}
+
+.home .cta-block .left ul li:last-child {
+    margin-bottom: 0;
+}
+
+.home .cta-block .left ul li a {
+    color: var(--font-color);
+    transition: 0.35s margin;
+    margin-left: 0.5rem;
+}
+
+.home .cta-block .left ul li:before {
+    content: "→";
+    position: relative;
+    left: 0;
+}
+
+.home .cta-block .left ul li:hover a {
+    margin-left: 0.75rem;
+}
+
+.home .services {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+.home .services-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 3rem;
+    margin-top: 2rem;
+}
+
+.home .services-detail h3 {
+    margin-bottom: 1rem;
+    font-family: "Inter", "HelveticaNeue", Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
 }

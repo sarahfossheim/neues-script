@@ -29,7 +29,7 @@ body {
 }
 
 .xnarrow {
-    width: 800px;
+    width: 700px;
     max-width: 85vw;
     margin-left: auto;
     margin-right: auto;
@@ -43,10 +43,16 @@ main {
     margin-top: 8rem;
 }
 
+h1, h2, h3, h4, h5 {
+    font-family: "Faune", "Inter", "HelveticaNeue", Helvetica, sans-serif;
+    font-weight: 400;
+}
+
 .brand h2 {
     color: var(--brand-color-1);
     position: fixed;
     text-transform: lowercase;
+    font-family: "Inter", "HelveticaNeue", Helvetica, sans-serif;
     font-weight: 800;
     font-size: 11.75rem;
     background-image: radial-gradient(at top left, var(--brand-color-1) 10%, transparent 10%),
@@ -60,20 +66,26 @@ main {
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
     z-index: -1;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
 }
 
 .brand h2:first-child {
     top: 200px;
     left: -360px;
     transform: rotate(-90deg);
-    animation: brand-left 10s none infinite;
+    /* animation: brand-left 10s none infinite; */
 }
 
 .brand h2:last-child {
     bottom: 170px;
     right: -300px;
     transform: rotate(-90deg);
-    animation: brand-right 10s none infinite;
+    /* animation: brand-right 10s none infinite; */
 }
 
 @keyframes brand-left {
