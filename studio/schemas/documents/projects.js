@@ -30,6 +30,12 @@ export default {
       name: 'categories',
       title: 'Categories',
       type: 'array',
+      of: [{type: 'reference', to: {type: 'work'}}]
+    },
+    {
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
       of: [{type: 'string'}]
     },
     {
@@ -43,6 +49,32 @@ export default {
       name: 'body',
       type: 'bodyPortableText',
       title: 'Body'
+    },
+    {
+      name: 'intro',
+      type: 'bodyPortableText',
+      title: 'Optional: Introduction',
+      description: 'Short intro to the project, this will be shown on the top of the project together with the cover image (optional)'
+    },
+    {
+      name: 'coverImages',
+      title: 'Optional: Cover images',
+      type: 'array',
+      of: [{type: 'mainImage'}],
+      description: 'Add one or more images to show at the top of the project'
+    },
+    {
+      type: 'array',
+      of: [{type: 'mainImage'}],
+      title: 'Optional: Storyboard Images',
+      name: 'storyboard',
+      description: 'Add a storyboard with images at the end of each project'
+    },
+    {
+      name: 'resources',
+      type: 'array',
+      title: 'Optional: Resources',
+      of: [{type: 'externalLink'}]
     }
   ],
   orderings: [

@@ -12,7 +12,7 @@ export default {
       name: 'social',
       type: 'array',
       title: 'Social Media links',
-      of: [{type: 'url'}]
+      of: [{type: 'externalLink'}]
     },
     {
       name: 'contact',
