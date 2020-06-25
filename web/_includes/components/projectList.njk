@@ -3,9 +3,11 @@
     {% for project in projectlist %}
     {% set currentProject = project.data.project %}
         <div class="project">
-            <h3>{{currentProject.title}}</h3>
-            <p class="project-description">{{currentProject.excerpt}}</p>
-            <p class="read-more"><a href="{{ project.url | url }}">Read more</a></p>
+            <div class="project-wrapper">
+                <h3>{{currentProject.title}}</h3>
+                <p class="project-description">{{currentProject.excerpt}}</p>
+                <p class="read-more"><a href="{{ project.url | url }}">Read more</a></p>
+            </div>
         </div>
     {% endfor %}
 </div>
