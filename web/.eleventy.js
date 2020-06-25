@@ -13,8 +13,14 @@ module.exports = function(eleventyConfig) {
     return util.inspect(value, {compact: false})
    });
 
-   eleventyConfig.addFilter("readableDate", dateObj => {
+  eleventyConfig.addFilter("readableDate", dateObj => {
     return new Date(dateObj).toDateString()
+  });
+
+  eleventyConfig.addFilter("getSelectedProjects", projects => {
+    return projects.filter((project) => {
+      return project.data.project.selected;
+    });
   });
 
   eleventyConfig.addPassthroughCopy("assets");

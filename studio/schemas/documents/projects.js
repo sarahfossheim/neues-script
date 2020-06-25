@@ -6,16 +6,20 @@ export default {
   title: 'Projects',
   fields: [
     {
+      name: 'selected',
+      type: 'boolean',
+      title: 'Featured',
+      description: 'If this is set to true, the post will be shown on the front page'
+    },
+    {
       name: 'title',
       type: 'string',
-      title: 'Title',
-      description: 'Project title'
+      title: 'Project Title'
     },
     {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
-      description: 'Some frontends will require a slug to be set to be able to show the post',
       options: {
         source: 'title',
         maxLength: 96

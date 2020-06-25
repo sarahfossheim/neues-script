@@ -15,9 +15,16 @@ export default {
       title: '0️⃣ Header: Description'
     },
     {
+      name: 'ctaTitle',
+      type: 'string',
+      title: '0️⃣ Header: CTA Title',
+      description: 'This is the title that will be displayed on top of the call to action links'
+    },
+    {
       name: 'headerImage',
       type: 'mainImage',
-      title: '0️⃣ Header: Image'
+      title: '0️⃣ Header: Image',
+      description: 'This is the main image that will be displayed in the intro section of the home page, next to the call to action links'
     },
     {
       name: 'projectsTitle',
@@ -80,9 +87,21 @@ export default {
       title: '3️⃣ Services: Block 3 Description'
     },
     {
+      name: 'servicesLinkText',
+      type: 'string',
+      title: '3️⃣ Services: CTA Title',
+      description: 'This is the text that will be used for the "read more" link underneath the services, that takes the user to the services page'
+    },
+    {
       name: 'journalTitle',
       type: 'string',
       title: '4️⃣ Journal: Title'
+    },
+    {
+      name: 'journalLimit',
+      type: 'number',
+      title: '4️⃣ Journal: Limit',
+      description: 'The limit defines the amount of posts that can be shown on the home page'
     }
   ]
 }

@@ -46,6 +46,11 @@ export default {
     {
       type: 'mainImage',
       options: {hotspot: true}
+    },
+    {
+      type: 'videoLink',
+      name: 'video',
+      title: 'Video Embed (url)'
     }
   ]
 }

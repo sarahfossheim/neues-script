@@ -16,6 +16,7 @@ article h1, article h2, article h2 strong {
 
 article p, article ul, article ol {
     margin-bottom: 1rem;
+    line-height: 150%;
 }
 
 article h1 {
@@ -55,7 +56,7 @@ article h2 {
 }
 
 
-article a {
+article p a {
     color: var(--font-color);
     background-color: var(--brand-color-3);
 }
@@ -66,4 +67,63 @@ article li, article li {
 
 article blockquote {
     font-size: 2rem;
+}
+
+article img {
+    max-width: 100%;
+}
+
+article h1.small-title {
+    font-size: var(--font-size-large);
+    margin-bottom: 0;
+}
+
+article h1.small-title:after {
+    display: none;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.image-gallery > * > img {
+    width: 100%;
+}
+
+.image-gallery *:nth-child(3n) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+article hr {
+    border: none;
+    border-bottom: 1px solid var(--font-color);
+    height: 1px;
+    opacity: 0.5;
+}
+
+.resources {
+    margin-bottom: 3rem;
+    list-style-position: inside;
+    padding-left: 1.5rem;
+}
+
+.resources a {
+    color: var(--font-color);
+}
+
+@media screen and (max-width: 900px) {
+    .image-gallery {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+    }
+
+    .image-gallery *:nth-child(3n) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
 }
