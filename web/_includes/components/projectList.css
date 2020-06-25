@@ -20,7 +20,7 @@
     position: relative;
     top: 0;
     left: 0;
-    transition: border 0.25s, background-color 0.25s, background-position 0.5s, transform 0.5s, top 0.5s, left 0.5s, border-radius 0.5s;
+    transition: background-color 0.25s, background-position 0.5s, transform 0.5s, top 0.5s, left 0.5s, border-radius 0.5s;
     background-image: linear-gradient(var(--category-color) 0.65rem, transparent 0.65rem);
     background-position: 0 -1rem;
     background-repeat: no-repeat;

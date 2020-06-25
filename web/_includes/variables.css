@@ -11,6 +11,11 @@
     --shadow-color: rgba(215,76,57,0.3);
     --project-background: rgba(255, 254, 238, 0.15);
 
+    --post-shadow: #DAE0D0;
+    --post-background: #FFFEEE;
+    --post-background-hover: #FFF;
+    --post-wrapper-background: #FFF;
+
     --font-size-normal: 1rem;
     --font-size-medium: 1.2em;
     --font-size-large: 1.6rem;
