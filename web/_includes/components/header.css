@@ -1,5 +1,5 @@
 .mainHeader h1 {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-large);
     font-weight: 800;
     text-transform: lowercase;
 }
@@ -30,7 +30,7 @@
 }
 
 .mainHeader {
-    margin-top: var(--font-size-medium);
+    margin-top: var(--font-size-large);
 }
 
 .mainHeader ul li a:hover {
@@ -47,6 +47,6 @@
 @media screen and (max-width: 850px) {
     .mainHeader ul li {
         display: block;
-        line-height: var(--font-size-medium);
+        line-height: var(--font-size-large);
     }
 }

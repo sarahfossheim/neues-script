@@ -38,3 +38,64 @@ body {
 ::selection {
     background-color: var(--brand-color-4);
 }
+
+main {
+    margin-top: 8rem;
+}
+
+.brand h2 {
+    color: var(--brand-color-1);
+    position: fixed;
+    text-transform: lowercase;
+    font-weight: 800;
+    font-size: 11.75rem;
+    background-image: radial-gradient(at top left, var(--brand-color-1) 10%, transparent 10%),
+        radial-gradient(at top right, var(--brand-color-1) 10%, transparent 10%),
+        radial-gradient(at bottom left, var(--brand-color-1) 10%, transparent 10%),
+        radial-gradient(at bottom right, var(--brand-color-1) 10%, transparent 10%),
+        radial-gradient(var(--brand-color-1) 20%, transparent 20%);
+    background-size: 6px 6px;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    z-index: -1;
+}
+
+.brand h2:first-child {
+    top: 200px;
+    left: -360px;
+    transform: rotate(-90deg);
+    animation: brand-left 10s none infinite;
+}
+
+.brand h2:last-child {
+    bottom: 170px;
+    right: -300px;
+    transform: rotate(-90deg);
+    animation: brand-right 10s none infinite;
+}
+
+@keyframes brand-left {
+    0% {
+        top: 200px;
+    }
+    50% {
+        top: 250px;
+    }
+    100% {
+        top: 200px;
+    }
+}
+
+@keyframes brand-right {
+    0% {
+        bottom: 170px;
+    }
+    50% {
+        bottom: 220px;
+    }
+    100% {
+        bottom: 170px;
+    }
+}

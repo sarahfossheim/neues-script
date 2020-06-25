@@ -7,5 +7,7 @@
     --brand-color-4: #FB8DE3;
 
     --font-size-normal: 1rem;
-    --font-size-medium: 1.6rem;
+    --font-size-medium: 1.2em;
+    --font-size-large: 1.6rem;
+    --font-size-xlarge: 2rem;
 }
