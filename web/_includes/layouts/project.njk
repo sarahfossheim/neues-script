@@ -9,3 +9,10 @@ templateClass: tmpl-project
   <p><a href="{{ '/' | url }}">← Home</a></p>
 </article>
 
+
+{% set css %}
+  {% include "layouts/post.css" %}
+{% endset %}
+<style>
+  {{ css | cssmin | safe }}
+</style>

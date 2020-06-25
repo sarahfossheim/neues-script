@@ -1,0 +1,69 @@
+
+article {
+    /* margin-top: 11rem; */
+    margin-bottom: 6rem;
+}
+
+article h1, article h2, article h3, article h4, article b, article strong {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+article h1, article h2, article h2 strong {
+    font-family: "Faune", "Inter", sans-serif;
+    font-weight: Normal !important;
+}
+
+article p, article ul, article ol {
+    margin-bottom: 1rem;
+}
+
+article h1 {
+    font-size: 3rem;
+    margin-bottom: 8rem;
+}
+
+article h1:after {
+    content: " ";
+    display: block;
+    width: 100%;
+    max-width: 333px;
+    height: 0.75rem;
+    background-image: radial-gradient(at top left, var(--brand-color-1) 10%, transparent 10%),
+        radial-gradient(at top right, var(--brand-color-1) 10%, transparent 10%),
+        radial-gradient(at bottom left, var(--brand-color-1) 10%, transparent 10%),
+        radial-gradient(at bottom right, var(--brand-color-1) 10%, transparent 10%),
+        radial-gradient(var(--brand-color-1) 20%, transparent 20%);
+    background-size: 3px 3px;
+    position: absolute;
+    margin: 2rem 0;
+}
+
+article h2 {
+    margin-top: 3rem;
+
+    background-image: linear-gradient(var(--background-color), var(--background-color)),
+        radial-gradient(at top left, var(--brand-color-1) 10%, transparent 10%),
+        radial-gradient(at top right, var(--brand-color-1) 10%, transparent 10%),
+        radial-gradient(at bottom left, var(--brand-color-1) 10%, transparent 10%),
+        radial-gradient(at bottom right, var(--brand-color-1) 10%, transparent 10%),
+        radial-gradient(var(--brand-color-1) 20%, transparent 20%);
+    background-size: 100% 100%, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 3px;
+    background-repeat: no-repeat, repeat, repeat, repeat, repeat, repeat;
+    background-position: 1rem 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+    padding-left: 1.5rem;
+}
+
+
+article a {
+    color: var(--font-color);
+    background-color: var(--brand-color-3);
+}
+
+article li, article li {
+    list-style-position: inside;
+}
+
+article blockquote {
+    font-size: 2rem;
+}
