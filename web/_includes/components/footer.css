@@ -25,3 +25,20 @@ footer > div section:first-child {
 footer > div section ul li {
     list-style-type: none;
 }
+
+@media screen and (max-width: 900px) {
+    footer > div {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
+
+    footer > div section:last-child {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    footer {
+        font-size: 1rem;
+    }
+}

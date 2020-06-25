@@ -10,6 +10,7 @@
     line-height: 135%;
 }
 
+
 .home .cta-block {
     display: block;
     position: relative;
@@ -138,4 +139,37 @@
 
 .home .services .read-more a:hover {
     margin-left: 0.75rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .home .cta-block .left {
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .home .cta-block {
+        overflow: visible;
+    }
+
+    .home .cta-block .left, .home .cta-block .right {
+        float: none;
+        position: static;
+        width: 100%;
+    }
+
+    .home .cta-block .right img {
+        position: static;
+    }
+
+    .home .cta-block .right:before {
+        display: none;
+    }
+
+    .home .services-detail {
+        grid-template-columns: 1fr;
+        row-gap: 2rem
+    }
+
+
 }
