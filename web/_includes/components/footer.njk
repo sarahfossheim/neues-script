@@ -17,3 +17,10 @@
     </ul>
     </section>
 </div>
+
+{% set css %}
+    {% include "components/footer.css" %}
+{% endset %}
+<style>
+    {{ css | cssmin | safe }}
+</style>

@@ -116,3 +116,26 @@
     font-weight: 600;
     font-size: 1rem;
 }
+
+.home .services .read-more {
+    margin-top: 2rem;
+}
+
+.home .services .read-more:before {
+    content: "→";
+    position: relative;
+    left: 0;
+}
+
+.home .services .read-more a {
+    font-size: var(--font-size-large);
+    font-family: "Faune", "Inter", "HelveticaNeue", Helvetica, sans-serif;
+    font-weight: normal;
+    color: var(--font-color);
+    transition: 0.35s margin;
+    margin-left: 0.5rem;
+}
+
+.home .services .read-more a:hover {
+    margin-left: 0.75rem;
+}
