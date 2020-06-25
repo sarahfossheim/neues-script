@@ -212,6 +212,10 @@
     background-color: rgba(255, 254, 238, 0.15);
 }
 
+.page {
+    margin-bottom: 5rem;
+}
+
 @media screen and (max-width: 1000px) {
     .home .cta-block .left {
         top: 0;
