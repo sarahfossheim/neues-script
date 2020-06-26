@@ -7,7 +7,7 @@ import MdWork from 'react-icons/lib/md/work'
 import MdGroupWork from 'react-icons/lib/md/group-work'
 
 const hiddenDocTypes = listItem =>
-  !['author', 'post', 'siteSettings', 'homePage', 'projects', 'services', 'about', 'footer', 'category'].includes(listItem.getId())
+  !['projectPage', 'journalPage', 'author', 'post', 'siteSettings', 'homePage', 'projects', 'services', 'about', 'footer', 'category'].includes(listItem.getId())
 
 export default () =>
   S.list()

@@ -7,18 +7,21 @@ export default {
     {
       name: 'title',
       type: 'string',
-      title: 'Title'
+      title: 'Title',
+      validation: Rule => Rule.required()
     },
     {
       name: 'description',
       type: 'text',
       title: 'Description',
-      description: 'Describe your blog for search engines and social media.'
+      description: 'Describe your blog for search engines and social media.',
+      validation: Rule => Rule.required()
     },
     {
       name: 'author',
       type: 'string',
-      title: 'Author'
+      title: 'Author',
+      validation: Rule => Rule.required()
     },
     {
       name: 'keywords',
@@ -28,7 +31,8 @@ export default {
       of: [{type: 'string'}],
       options: {
         layout: 'tags'
-      }
+      },
+      validation: Rule => Rule.required()
     }
   ]
 }

@@ -7,11 +7,13 @@ module.exports =  async function() {
       ...,
       'headerImage': {
         'url': headerImage.asset->url,
-        'alt': headerImage.alt
+        'alt': headerImage.alt,
+        'caption': headerImage.caption
       },
       'aboutImage': {
         'url': aboutImage.asset->url,
-        'alt': aboutImage.alt
+        'alt': aboutImage.alt,
+        'caption': aboutImage.caption
       }
     }
   `);

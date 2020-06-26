@@ -6,7 +6,8 @@ export default {
     {
       name: 'href',
       type: 'url',
-      title: 'URL'
+      title: 'URL',
+      validation: Rule => Rule.required()
     },
     {
       name: 'title',

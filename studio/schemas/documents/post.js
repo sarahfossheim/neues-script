@@ -9,7 +9,8 @@ export default {
       name: 'title',
       type: 'string',
       title: 'Title',
-      description: 'Blog post title'
+      description: 'Blog post title',
+      validation: Rule => Rule.required()
     },
     {
       name: 'slug',
@@ -19,13 +20,15 @@ export default {
       options: {
         source: 'title',
         maxLength: 96
-      }
+      },
+      validation: Rule => Rule.required()
     },
     {
       name: 'publishedAt',
       type: 'datetime',
       title: 'Published at',
-      description: 'This can be used to schedule post for publishing'
+      description: 'This can be used to schedule post for publishing',
+      validation: Rule => Rule.required()
     },
     {
       name: 'categories',
@@ -38,7 +41,8 @@ export default {
             type: 'category'
           }
         }
-      ]
+      ],
+      validation: Rule => Rule.required()
     },
     {
       name: 'tags',
@@ -51,12 +55,14 @@ export default {
       type: 'text',
       title: 'Excerpt',
       description:
-        'This ends up on summary pages, on Google, when people share your post in social media.'
+        'This ends up on summary pages, on Google, when people share your post in social media.',
+      validation: Rule => Rule.required()
     },
     {
       name: 'body',
       type: 'bodyPortableText',
-      title: 'Body'
+      title: 'Body',
+      validation: Rule => Rule.required()
     }
   ],
   orderings: [
