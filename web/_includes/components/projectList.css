@@ -124,6 +124,36 @@
     --brand-color-3: #FFF9F3;
 }
 
+.projects-page .project-overview  {
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+
+    --shadow-color: repeating-linear-gradient(
+        45deg,
+        #FFFBF8,
+        #FFFBF8 5px,
+        #FF9A6E 5px,
+        #FF9A6E 6px
+    );
+    --project-background: #FFF9F3;
+    --brand-color-3: #FFF9F3;
+}
+
+.more-posts-wrapper .project-overview {
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+
+    --shadow-color: repeating-linear-gradient(
+        45deg,
+        #FFFBF8,
+        #FFFBF8 5px,
+        #FF9A6E 5px,
+        #FF9A6E 6px
+    );
+    --project-background: #FFF;
+    --brand-color-3: #FFF9F3;
+}
+
 @media screen and (max-width: 900px) {
     .project-overview {
         grid-template-columns: 1fr;

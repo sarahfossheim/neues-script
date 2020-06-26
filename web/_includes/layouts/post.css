@@ -116,6 +116,66 @@ article hr {
     color: var(--font-color);
 }
 
+.more-posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.more-posts-wrapper {
+    margin-top: 6rem;
+    background-color: var(--brand-color-3);
+    padding: 4rem 0;
+    position: relative;
+}
+
+.more-posts-wrapper:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1rem;
+    display: block;
+    width: 100%;
+    height: 1rem;
+    background-color: var(--background-color);
+    background-image: radial-gradient(at top left, var(--brand-color-1) 10%, transparent 10%),
+        radial-gradient(at top right, var(--brand-color-1) 10%, transparent 10%),
+        radial-gradient(at bottom left, var(--brand-color-1) 10%, transparent 10%),
+        radial-gradient(at bottom right, var(--brand-color-1) 10%, transparent 10%),
+        radial-gradient(var(--brand-color-1) 20%, transparent 20%);
+    background-size: 6px 6px;
+}
+
+.more-posts p:nth-child(2) {
+    text-align: center;
+}
+
+.more-posts p:last-child {
+    text-align: right;
+}
+
+.more-posts-wrapper .journal {
+    margin-top: 6rem;
+}
+
+.more-posts-wrapper  .more-posts p a {
+    color: var(--font-color);
+    text-decoration: none;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid var(--font-color);
+    transition: padding 0.25s, top 0.25s;
+    position: relative;
+    top: 0;
+}
+
+.more-posts-wrapper  .more-posts p a:hover {
+    padding-bottom: 0.4rem;
+    top: -0.2rem;
+}
+
+.more-posts-wrapper .project-overview  {
+    margin-top: 4rem;
+}
+
 @media screen and (max-width: 900px) {
     .image-gallery {
         grid-template-columns: 1fr;
