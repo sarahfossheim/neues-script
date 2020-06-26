@@ -48,6 +48,15 @@ export default () =>
         .schemaType('projects')
         .child(S.documentTypeList('projects').title('Projects')),
       S.listItem()
+        .title('Project Settings')
+        .icon(MdWork)
+        .child(
+          S.editor()
+            .id('projectPage')
+            .schemaType('projectPage')
+            .documentId('projectPage')
+        ),
+      S.listItem()
         .title('Services')
         .icon(MdGroupWork)
         .child(
@@ -72,6 +81,15 @@ export default () =>
         .icon(MdLibraryBooks)
         .schemaType('post')
         .child(S.documentTypeList('post').title('Blog posts')),
+      S.listItem()
+        .title('Journal Settings')
+        .icon(MdLibraryBooks)
+        .child(
+          S.editor()
+            .id('journalPage')
+            .schemaType('journalPage')
+            .documentId('journalPage')
+        ),
       S.listItem()
         .title('Categories')
         .icon(MdSettings)
