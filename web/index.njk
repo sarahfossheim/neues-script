@@ -23,7 +23,12 @@ navtitle: Home
       </ul>
     </div>
     <div class="right">
-      <img src={{home.headerImage.url}} alt={{home.headerImage.alt}} />
+      <div class="wrapper">
+        <img src={{home.headerImage.url}} alt={{home.headerImage.alt}} />
+      </div>
+      {% if home.headerImage.caption %}
+        <figcaption>{{home.headerImage.caption}}</figcaption>
+      {% endif %}
     </div>
   </section>
   
@@ -41,7 +46,12 @@ navtitle: Home
       <p>{{home.aboutDescription}}</p>
     </div>
     <div class="right">
-      <img src={{home.aboutImage.url}} alt={{home.aboutImage.alt}} />
+      <div class="wrapper">
+        <img src={{home.aboutImage.url}} alt={{home.aboutImage.alt}} />
+      </div>
+      {% if home.aboutImage.caption %}
+        <figcaption>{{home.aboutImage.caption}}</figcaption>
+      {% endif %}
     </div>
   </section>
 

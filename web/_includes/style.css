@@ -98,6 +98,10 @@ h1, h2, h3, h4, h5 {
     line-height: 135%;
 }
 
+figcaption {
+    font-size: 0.7rem;
+}
+
 @keyframes brand-left {
     0% {
         top: 200px;

@@ -20,6 +20,8 @@ import mainImage from './objects/mainImage'
 import externalLink from './objects/link'
 import category from './objects/category'
 import videoLink from './objects/videoLink'
+import projectSettings from './documents/projectSettings'
+import postSettings from './documents/postSettings'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -32,8 +34,10 @@ export default createSchema({
     // in the studio.
     siteSettings,
     post,
+    postSettings,
     home,
     projects,
+    projectSettings,
     about,
     services,
     footer,

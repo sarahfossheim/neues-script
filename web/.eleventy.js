@@ -23,6 +23,10 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  eleventyConfig.addFilter("consoleDump", function(anything) {
+    console.log(anything);
+  });
+
   eleventyConfig.addPassthroughCopy("assets");
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string

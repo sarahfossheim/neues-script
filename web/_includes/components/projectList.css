@@ -30,16 +30,18 @@
     background: var(--shadow-color);
     border-radius: 0.65rem;
     animation: project-hover 0.75s ease-in-out forwards;
+    -webkit-animation: project-hover 0.75s ease-in-out forwards;
 }
 
 .project-overview .project:hover .project-wrapper {
     background-color: var(--brand-color-3);
-    transform: scale(1.01);
+    /* transform: scale(1.01); */
     top: -15px;
     left: -15px;
     border-radius: 0.8rem;
     background-position: 0 0;
     animation: project-wrapper-hover 0.75s ease-in-out forwards;
+    -webkit-animation: project-wrapper-hover 0.75s ease-in-out forwards;
 }
 
 .project-overview .project h3 {
@@ -124,11 +126,42 @@
     --brand-color-3: #FFF9F3;
 }
 
+.projects-page .project-overview  {
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+
+    --shadow-color: repeating-linear-gradient(
+        45deg,
+        #FFFBF8,
+        #FFFBF8 5px,
+        #FF9A6E 5px,
+        #FF9A6E 6px
+    );
+    --project-background: #FFF9F3;
+    --brand-color-3: #FFF9F3;
+}
+
+.more-posts-wrapper .project-overview {
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+
+    --shadow-color: repeating-linear-gradient(
+        45deg,
+        #FFFBF8,
+        #FFFBF8 5px,
+        #FF9A6E 5px,
+        #FF9A6E 6px
+    );
+    --project-background: #FFF;
+    --brand-color-3: #FFF9F3;
+}
+
 @media screen and (max-width: 900px) {
     .project-overview {
         grid-template-columns: 1fr;
     }
 }
+
 
 @keyframes project-hover {
     0% {
@@ -155,5 +188,40 @@
     }
     100% {
         transform: scale(1.00) rotateX(0) rotateY(0) rotateZ(0);
+    }
+}
+
+@-webkit-keyframes project-hover {
+    0% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+    20% {
+        transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+    }
+    40% {
+        transform: scale(1.01);
+        -webkit-transform: scale(1.01);
+    }
+    100% {
+        transform: scale(1.00);
+        -webkit-transform: scale(1.00);
+    }
+}
+
+
+@-webkit-keyframes project-wrapper-hover {
+    0% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+    35% {
+        transform: scale(1.001);
+        -webkit-transform: scale(1.001);
+    }
+    100% {
+        transform: scale(1.00);
+        -webkit-transform: scale(1.00);
     }
 }

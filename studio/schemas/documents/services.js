@@ -6,12 +6,14 @@ export default {
     {
       name: 'title',
       type: 'string',
-      title: 'Page Title'
+      title: 'Page Title',
+      validation: Rule => Rule.required()
     },
     {
       name: 'body',
       type: 'bodyPortableText',
-      title: 'Body'
+      title: 'Body',
+      validation: Rule => Rule.required()
     }
   ]
 }

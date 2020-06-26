@@ -14,7 +14,8 @@ export default {
     {
       name: 'title',
       type: 'string',
-      title: 'Project Title'
+      title: 'Project Title',
+      validation: Rule => Rule.required()
     },
     {
       name: 'slug',
@@ -23,12 +24,14 @@ export default {
       options: {
         source: 'title',
         maxLength: 96
-      }
+      },
+      validation: Rule => Rule.required()
     },
     {
       name: 'publishedAt',
       type: 'datetime',
-      title: 'Published at'
+      title: 'Published at',
+      validation: Rule => Rule.required()
     },
     {
       name: 'categories',
@@ -41,7 +44,8 @@ export default {
             type: 'category'
           }
         }
-      ]
+      ],
+      validation: Rule => Rule.required()
     },
     {
       name: 'tags',
@@ -54,12 +58,8 @@ export default {
       type: 'text',
       title: 'Excerpt',
       description:
-        'This ends up on summary pages, on Google, when people share your post in social media.'
-    },
-    {
-      name: 'body',
-      type: 'bodyPortableText',
-      title: 'Body'
+        'This ends up on summary pages, on Google, when people share your post in social media.',
+      validation: Rule => Rule.required()
     },
     {
       name: 'intro',
@@ -73,6 +73,12 @@ export default {
       type: 'array',
       of: [{type: 'mainImage'}],
       description: 'Add one or more images to show at the top of the project'
+    },
+    {
+      name: 'body',
+      type: 'bodyPortableText',
+      title: 'Body',
+      validation: Rule => Rule.required()
     },
     {
       type: 'array',

@@ -38,9 +38,35 @@ templateClass: tmpl-project
     {% endfor %}
     </ul>
   {% endif %}
-  
-  <p class="narrow"><a href="{{ '/' | url }}">← Home</a></p>
 </article>
+
+<div class="more-posts-wrapper">
+  <div class="narrow more-posts">
+    {% set previousPost = collections.projects | getPreviousCollectionItem(page) %}
+    {% set nextPost = collections.projects | getNextCollectionItem(page) %}
+
+    <p>
+      {% if previousPost.data.project.title %}
+        <a href="/projects/{{previousPost.data.project.slug.current}}">← Previous project </a>
+      {% endif %}
+    </p>
+    <p><a href="{{ '/' | url }}">Home</a></p>
+    <p>
+      {% if nextPost.data.project.title %}
+        <a href="/projects/{{nextPost.data.project.slug.current}}">Next project →</a>
+      {% endif %}
+    </p>
+  </div>
+
+  {# <section class="journal">
+    <div class="wide">
+      <h2 class="narrow">More projects</h2>
+      {% set projectlist = collections.projects.slice(0,2) %}
+      {% include "components/projectList.njk" %}
+    </div>
+  </section> #}
+</div>
+
 
 
 {% set css %}

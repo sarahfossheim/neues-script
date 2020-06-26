@@ -6,12 +6,14 @@ export default {
     {
       name: 'href',
       type: 'url',
-      title: 'URL'
+      title: 'URL',
+      validation: Rule => Rule.required()
     },
     {
       name: 'linkName',
       type: 'string',
-      title: 'Title'
+      title: 'Title',
+      validation: Rule => Rule.required()
     }
   ],
   preview: {

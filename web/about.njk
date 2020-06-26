@@ -9,3 +9,12 @@ permalink: /about/
 
     {{ about.body | markdownify | safe }}
 </article>
+
+
+{% set css %}
+  {% include "layouts/post.css" %}
+{% endset %}
+
+<style>
+  {{ css | cssmin | safe }}
+</style>
