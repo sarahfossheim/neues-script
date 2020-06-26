@@ -1,5 +1,5 @@
 export default {
-  name: 'work',
+  name: 'category',
   type: 'document',
   title: 'Category',
   fields: [

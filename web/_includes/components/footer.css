@@ -4,7 +4,7 @@ footer {
     padding-bottom: 4rem;
     position: relative;
     z-index: 2;
-    font-size: 0.75rem;
+    /* font-size: 0.75rem; */
 }
 
 footer > div {
@@ -19,10 +19,19 @@ footer > div section:last-child {
 
 footer > div section:first-child {
     margin-top: 1.5rem;
+    font-size: 0.8rem;
 }
 
 footer > div section ul li {
     list-style-type: none;
+}
+
+footer > div section ul li a {
+    color: var(--font-color);
+}
+
+#revue-embed {
+    margin-bottom: 2rem;
 }
 
 @media screen and (max-width: 900px) {

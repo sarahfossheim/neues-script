@@ -80,6 +80,35 @@
     left: 0;
 }
 
+.project-overview .project .project-categories {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.project-overview .project .project-tags {
+    font-size: 0.7rem;
+    list-style-type: none;
+    margin-top: 1.5rem;
+}
+
+.project-overview .project .project-tags li {
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 3rem;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+    transition: background 0.25s 0.05s;
+    margin-bottom: 0.5rem;
+}
+
+.project-overview .project:hover .project-tags li {
+    background-color: var(--category-color);
+}
+
+.project-overview .project .project-categories span {
+    font-weight: 500;
+}
+
 .projects-page .project-overview  {
     margin-top: 6rem;
     margin-bottom: 5rem;

@@ -93,6 +93,51 @@
     animation: post-wrapper-hover 0.75s ease-in-out forwards;
 }
 
+.posts-overview .post .post-categories {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    line-height: 150%;
+    transition: line-height 0.2s;
+}
+
+.posts-overview .post:hover .post-categories {
+    line-height: 175%;
+}
+
+.posts-overview .post .post-categories span {
+    font-weight: 500;
+}
+
+.posts-overview .post .post-tags {
+    font-size: 0.7rem;
+    list-style-type: none;
+}
+
+.posts-overview .post .post-tags li {
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 3rem;
+    margin-right: 0.5rem;
+    transition: background 0.25s 0.05s, padding 0.25s 0.05s;
+    margin-bottom: 0.5rem;
+}
+
+.posts-overview .post:hover .post-tags li {
+    background-color: var(--category-color);
+    padding: 0.25rem 0.5rem;
+}
+
+/* .posts-overview .post .post-categories span {
+    background-color: transparent;
+    transition: background 0.3s;
+}
+
+.posts-overview .post:hover .post-categories span {
+    background-color: var(--category-color);
+    padding: 0.1rem 0.2rem;
+} */
+
+
 .archive {
     margin-bottom: 5rem;
     --post-shadow: repeating-linear-gradient(

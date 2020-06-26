@@ -25,14 +25,15 @@ async function getPosts () {
     title,
     slug,
     excerpt,
-    categories,
     body,
     intro,
     coverImages,
     storyboard,
-    resources
+    resources,
+    tags,
+    categories[]->
   }`
-  const order = `| order(publishedAt asc)`
+  const order = `| order(publishedAt desc)`
   const query = [filter, projection, order].join(' ')
   const docs = await client.fetch(query).catch(err => console.error(err))
   const reducedDocs = overlayDrafts(hasToken, docs)

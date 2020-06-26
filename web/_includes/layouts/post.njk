@@ -2,16 +2,22 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
-<article class="narrow">
-  <h1>{{ post.title }}</h1>
-  {{ post.body | markdownify | safe }}
-  <p><a href="{{ '/' | url }}">← Home</a></p>
+<article class="wide">
+  
+  <h1 class="narrow">{{ post.title }}</h1>
+  
+  <div class="xnarrow">
+    {{ post.body | markdownify | safe }}
+  </div>
+  
+  <p class="narrow"><a href="{{ '/' | url }}">← Home</a></p>
 </article>
 
 
 {% set css %}
   {% include "layouts/post.css" %}
 {% endset %}
+
 <style>
   {{ css | cssmin | safe }}
 </style>

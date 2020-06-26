@@ -11,7 +11,13 @@
     --shadow-color: rgba(215,76,57,0.3);
     --project-background: rgba(255, 254, 238, 0.15);
 
-    --post-shadow: #DAE0D0;
+    --post-shadow: repeating-linear-gradient(
+        45deg,
+        #FFFBF8,
+        #FFFBF8 5px,
+        #FF9A6E 5px,
+        #FF9A6E 6px
+    );;
     --post-background: #FFFEEE;
     --post-background-hover: #FFF;
     --post-wrapper-background: #FFF;
