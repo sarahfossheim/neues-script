@@ -7,7 +7,7 @@ import MdWork from 'react-icons/lib/md/work'
 import MdGroupWork from 'react-icons/lib/md/group-work'
 
 const hiddenDocTypes = listItem =>
-  !['author', 'post', 'siteSettings', 'homePage', 'projects', 'services', 'about', 'footer', 'work'].includes(listItem.getId())
+  !['author', 'post', 'siteSettings', 'homePage', 'projects', 'services', 'about', 'footer', 'category'].includes(listItem.getId())
 
 export default () =>
   S.list()
@@ -75,8 +75,8 @@ export default () =>
       S.listItem()
         .title('Categories')
         .icon(MdSettings)
-        .schemaType('work')
-        .child(S.documentTypeList('work').title('Categories')),
+        .schemaType('category')
+        .child(S.documentTypeList('category').title('Categories')),
       // This returns an array of all the document types
       // defined in schema.js. We filter out those that we have
       // defined the structure above
