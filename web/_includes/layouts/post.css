@@ -58,11 +58,12 @@ article h2 {
 
 article p a {
     color: var(--font-color);
+    transition: 0.3s background;
 }
 
-/* article p a:hover {
-    background-color: var(--brand-color-1);
-} */
+article p a:hover {
+    background-color: var(--brand-color-5);
+}
 
 article li, article li {
     list-style-position: inside;
