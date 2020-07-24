@@ -58,15 +58,15 @@ article h2 {
 
 article p a {
     color: var(--font-color);
-    background-color: var(--brand-color-3);
+    transition: 0.3s background;
+}
+
+article p a:hover {
+    background-color: var(--brand-color-5);
 }
 
 article li, article li {
     list-style-position: inside;
-}
-
-article blockquote {
-    font-size: 2rem;
 }
 
 article img {
@@ -114,6 +114,10 @@ article hr {
 
 .resources a {
     color: var(--font-color);
+}
+
+.resources a:hover {
+    background-color: var(--brand-color-5);
 }
 
 .more-posts {

@@ -20,6 +20,8 @@ import mainImage from './objects/mainImage'
 import externalLink from './objects/link'
 import category from './objects/category'
 import videoLink from './objects/videoLink'
+import audioLink from './objects/audioLink'
+import embed from './objects/embed'
 import projectSettings from './documents/projectSettings'
 import postSettings from './documents/postSettings'
 
@@ -46,7 +48,9 @@ export default createSchema({
     excerptPortableText,
     externalLink,
     category,
-    videoLink
+    videoLink,
+    audioLink,
+    embed
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
