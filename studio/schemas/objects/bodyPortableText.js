@@ -51,6 +51,11 @@ export default {
       type: 'videoLink',
       name: 'video',
       title: 'Video Embed (url)'
+    },
+    {
+      type: 'embed',
+      name: 'embed',
+      title: 'Code Embed'
     }
   ]
 }
