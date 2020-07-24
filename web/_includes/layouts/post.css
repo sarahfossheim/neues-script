@@ -68,10 +68,6 @@ article li, article li {
     list-style-position: inside;
 }
 
-article blockquote {
-    font-size: 2rem;
-}
-
 article img {
     max-width: 100%;
 }
