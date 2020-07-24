@@ -116,6 +116,10 @@ article hr {
     color: var(--font-color);
 }
 
+.resources a:hover {
+    background-color: var(--brand-color-5);
+}
+
 .more-posts {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
