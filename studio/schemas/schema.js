@@ -24,6 +24,7 @@ import audioLink from './objects/audioLink'
 import embed from './objects/embed'
 import projectSettings from './documents/projectSettings'
 import postSettings from './documents/postSettings'
+import infoPage from './documents/infoPage'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -50,7 +51,8 @@ export default createSchema({
     category,
     videoLink,
     audioLink,
-    embed
+    embed,
+    infoPage
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
