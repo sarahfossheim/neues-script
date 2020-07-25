@@ -19,6 +19,8 @@ async function getPosts () {
     _id,
     publishedAt,
     title,
+    subtitle,
+    author,
     slug,
     excerpt,
     categories,

@@ -23,6 +23,7 @@ async function getPosts () {
     selected,
     publishedAt,
     title,
+    subtitle,
     slug,
     excerpt,
     body,

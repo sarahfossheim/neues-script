@@ -13,6 +13,17 @@ export default {
       validation: Rule => Rule.required()
     },
     {
+      name: 'subtitle',
+      type: 'string',
+      title: 'Subitle'
+    },
+    {
+      name: 'author',
+      type: 'string',
+      title: 'Author',
+      validation: Rule => Rule.required()
+    },
+    {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
