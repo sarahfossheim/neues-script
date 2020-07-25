@@ -35,6 +35,10 @@ footer .content section ul li a {
     font-size: 0.8rem;
 }
 
+#revue-embed .newsletter-explanation {
+    margin-bottom: 0.75rem;
+}
+
 #revue-embed form {
     width: 100%;
 }

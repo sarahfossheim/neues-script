@@ -1,0 +1,10 @@
+---
+layout: layouts/home.njk
+templateClass: tmpl-page
+---
+
+<article class="narrow page">
+    <h1>{{infoPage.title}}</h1>
+
+    {{ infoPage.body | markdownify | safe }}
+</article>

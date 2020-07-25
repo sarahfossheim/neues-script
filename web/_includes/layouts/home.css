@@ -21,6 +21,8 @@
     top: 3rem;
     left: 0;
     z-index: 1;
+    background-color: var(--brand-color-1-dark);
+    padding: 2rem;
 }
 
 .home .cta-block .left.left-text {
@@ -81,10 +83,7 @@
 
 .home .cta-block .left ul, .home .cta-block .left p {
     width: 100%;
-    background-color: var(--brand-color-1-dark);
-    padding: 2rem;
-    position: relative;
-    top: 1rem;
+    margin-top: 1rem;
     list-style-type: none;
 }
 

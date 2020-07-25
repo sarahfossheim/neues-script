@@ -5,10 +5,19 @@ templateClass: tmpl-post
 
 <article class="wide">
   
-  <h1 class="narrow">{{ post.title }}</h1>
-  
+  <div class="narrow title-wrapper">
+    <h1 class="narrow">{{ post.title }}</h1>
+    {% if post.subtitle %}
+      <h2 class="subtitle">{{post.subtitle}}</h2>
+    {% endif %}
+  </div>
+
   <div class="xnarrow">
     {{ post.body | markdownify | safe }}
+
+    {% if post.author %}
+      <p class="published-info">Published by {{post.author}} on {{post.publishedAt | readableDate}}</p>
+    {% endif %}
   </div>
   
 </article>

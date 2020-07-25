@@ -21,10 +21,19 @@ article p, article ul, article ol {
 
 article h1 {
     font-size: 3rem;
+}
+
+article .title-wrapper {
     margin-bottom: 8rem;
 }
 
-article h1:after {
+article .title-wrapper h2 {
+    padding: 0;
+    background-image: none;
+    margin-top: 0rem;
+}
+
+article .title-wrapper:after {
     content: " ";
     display: block;
     width: 100%;
@@ -178,6 +187,10 @@ article hr {
 
 .more-posts-wrapper .project-overview  {
     margin-top: 4rem;
+}
+
+.published-info {
+    margin-top: 3rem;
 }
 
 @media screen and (max-width: 900px) {

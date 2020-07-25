@@ -3,14 +3,22 @@ layout: layouts/base.njk
 templateClass: tmpl-project
 ---
 <article class="wide">
-
   {% if project.intro %}
     <h1 class="narrow small-title">{{ project.title }}</h1>
+    {% if project.subtitle %}
+      <h2 class="subtitle">{{project.subtitle}}</h2>
+    {% endif %}
     <div class="narrow medium-text">
       {{ project.intro | markdownify | safe }}
     </div>
   {% else %}
-    <h1 class="narrow">{{ project.title }}</h1>
+    <div class="narrow title-wrapper">
+      <h1 class="narrow">{{ project.title }}</h1>
+      {% if project.subtitle %}
+        <h2 class="subtitle">{{project.subtitle}}</h2>
+      {% endif %}
+    </div>
+
   {% endif %}
 
   {% if project.coverImages %}
@@ -38,6 +46,8 @@ templateClass: tmpl-project
     {% endfor %}
     </ul>
   {% endif %}
+
+  <p class="published-info xnarrow">Published on {{project.publishedAt | readableDate}}</p>
 </article>
 
 <div class="more-posts-wrapper">

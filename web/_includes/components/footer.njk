@@ -2,6 +2,11 @@
     <section>
         <h2>Newsletter</h2>
         <div id="revue-embed">
+            {% if footer.newsletter.length > 0 %}
+                <div class="newsletter-explanation">
+                    <p>{{footer.newsletter | markdownify | safe}}</p>
+                </div>
+            {% endif %}
             <form action="https://www.getrevue.co/profile/neuescript/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank">
                 <div class="revue-form-group">
                     <label for="member_email">Email address</label>
@@ -39,7 +44,7 @@
 </div>
 
 <div class="wide privacy">
-    {{footer.privacy}} 
+    {{footer.privacy | markdownify | safe}} 
 </div>
 
 {% set css %}
