@@ -16,7 +16,6 @@ async function getPages () {
     const pages = await client.fetch(groq`*[_type == "infoPage"]`);
     const reducedDocs = overlayDrafts(hasToken, pages)
     const preparePages = reducedDocs.map(generateBody)
-  console.log('>>>', preparePages);
 //   return generateBody(preparePages)
     return preparePages;
 }

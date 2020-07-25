@@ -4,8 +4,14 @@ export default {
   title: 'Footer',
   fields: [
     {
+      name: 'newsletter',
+      type: 'bodyPortableText',
+      title: 'Newsletter explanation',
+      validation: Rule => Rule.required()
+    },
+    {
       name: 'privacy',
-      type: 'text',
+      type: 'bodyPortableText',
       title: 'Privacy statement (footer)',
       validation: Rule => Rule.required()
     },
