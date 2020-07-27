@@ -16,8 +16,20 @@ module.exports = {
       return `![${node.alt}](${imageUrl(node).url()})`;
     },
     file: ({node}) => '',
-    video: ({node}) => `VIDEO: <iframe width="100%" height="400px" src="${node.href}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+    video: ({node}) => `<iframe width="100%" height="400px" src="${node.href}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
     audio: ({node}) => `<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${node.code}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>`,
-    embed: ({node}) => `${node.code}`
+    embed: ({node}) => `${node.code}`,
+    highlighted: ({node}) => {
+      let list = ``;
+      node.list.forEach(item => {
+        list += `<li>${item}</li>`;
+      });
+      list = `<ul>${list}</ul>`
+
+      return `<div class="highlighted">
+        <h3>${node.title}</h3>
+        ${list}
+      </div>`;
+    }
   }
 }

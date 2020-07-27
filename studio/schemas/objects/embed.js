@@ -1,7 +1,10 @@
+import MdCode from 'react-icons/lib/md/code'
+
 export default {
   name: 'embed',
   type: 'object',
   title: 'Embed code',
+  icon: MdCode,
   fields: [
     {
       name: 'code',

@@ -27,12 +27,12 @@ templateClass: tmpl-project
     </div>
   {% endif %}
 
-  <div class="xnarrow">
+  <div class="narrow post-body">
     {{ project.body | markdownify | safe }}
   </div>
 
   {% if project.storyboard %}
-    <div class="narrow image-gallery">
+    <div class="wide image-gallery">
       {{ project.storyboard | markdownify | safe }}
     </div>
   {% endif %}
