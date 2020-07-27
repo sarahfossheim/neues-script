@@ -24,7 +24,7 @@ article h1 {
 }
 
 article .title-wrapper {
-    margin-bottom: 8rem;
+    margin-bottom: 1rem;
 }
 
 article .title-wrapper h2 {
@@ -33,37 +33,27 @@ article .title-wrapper h2 {
     margin-top: 0rem;
 }
 
-article .title-wrapper:after {
-    content: " ";
-    display: block;
-    width: 100%;
-    max-width: 333px;
-    height: 0.75rem;
-    background-image: radial-gradient(at top left, var(--brand-color-1) 10%, transparent 10%),
-        radial-gradient(at top right, var(--brand-color-1) 10%, transparent 10%),
-        radial-gradient(at bottom left, var(--brand-color-1) 10%, transparent 10%),
-        radial-gradient(at bottom right, var(--brand-color-1) 10%, transparent 10%),
-        radial-gradient(var(--brand-color-1) 20%, transparent 20%);
-    background-size: 3px 3px;
-    position: absolute;
-    margin: 2rem 0;
-}
-
 article h2 {
     margin-top: 3rem;
+    --pattern: var(--font-color);
 
-    background-image: linear-gradient(var(--background-color), var(--background-color)),
-        radial-gradient(at top left, var(--brand-color-1) 10%, transparent 10%),
-        radial-gradient(at top right, var(--brand-color-1) 10%, transparent 10%),
-        radial-gradient(at bottom left, var(--brand-color-1) 10%, transparent 10%),
-        radial-gradient(at bottom right, var(--brand-color-1) 10%, transparent 10%),
-        radial-gradient(var(--brand-color-1) 20%, transparent 20%);
-    background-size: 100% 100%, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 3px;
-    background-repeat: no-repeat, repeat, repeat, repeat, repeat, repeat;
-    background-position: 1rem 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+    background-image: linear-gradient(var(--pattern), var(--pattern)),
+        linear-gradient(var(--background-color), var(--background-color)),
+        radial-gradient(at top left, var(--pattern) 10%, transparent 10%),
+        radial-gradient(at top right, var(--pattern) 10%, transparent 10%),
+        radial-gradient(at bottom left, var(--pattern) 10%, transparent 10%),
+        radial-gradient(at bottom right, var(--pattern) 10%, transparent 10%),
+        radial-gradient(var(--pattern) 20%, transparent 20%);
+    
+    background-size: 3px 100%, 100% 100%, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 3px;
+    background-repeat: no-repeat, no-repeat, repeat, repeat, repeat, repeat, repeat;;
+    background-position: calc(0.75rem - 3px) 0, 0.75rem 0, 0 0, 0 0, 0 0, 0 0, 0 0;
     padding-left: 1.5rem;
 }
 
+article.services-page h2 {
+    --pattern: var(--brand-color-1);
+}
 
 article p a {
     color: var(--font-color);
@@ -113,6 +103,16 @@ article hr {
     border-bottom: 1px solid var(--font-color);
     height: 1px;
     opacity: 0.5;
+}
+
+article .post-body hr {
+    margin: 2rem 0;
+}
+
+.highlighted {
+    background-color: var(--brand-color-5);
+    padding: 2rem;
+    margin: 1rem 0;
 }
 
 .resources {

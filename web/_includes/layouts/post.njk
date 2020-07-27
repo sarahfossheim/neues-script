@@ -12,7 +12,7 @@ templateClass: tmpl-post
     {% endif %}
   </div>
 
-  <div class="xnarrow">
+  <div class="narrow post-body">
     {{ post.body | markdownify | safe }}
 
     {% if post.author %}

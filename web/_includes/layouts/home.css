@@ -224,6 +224,11 @@
     margin-bottom: 5rem;
 }
 
+.projects-page h1, .archive h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
 @media screen and (max-width: 1000px) {
     .home .cta-block .left {
         top: 0;

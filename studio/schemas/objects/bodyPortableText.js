@@ -56,6 +56,11 @@ export default {
       type: 'embed',
       name: 'embed',
       title: 'Code Embed'
+    },
+    {
+      type: 'highlighted',
+      name: 'highlighted',
+      title: 'Highlighted'
     }
   ]
 }
