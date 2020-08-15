@@ -5,7 +5,7 @@
     margin-bottom: 0.5rem;
 }
 
-.home .cta-block {
+.home .cta-block:not(.animation-block) {
     display: block;
     position: relative;
     height: 100%;
@@ -14,15 +14,28 @@
     min-height: 20rem;
 }
 
+.home .cta-block.animation-block {
+    display: block;
+    position: relative;
+    height: 100%;
+    overflow: visible;
+    margin-top: 7rem;
+    min-height: 25rem;
+}
+
 .home .cta-block .left {
     float: left;
     width: 40%;
     position: absolute;
     top: 3rem;
     left: 0;
-    z-index: 1;
+    z-index: 3;
     background-color: var(--brand-color-1-dark);
     padding: 2rem;
+}
+
+.home .cta-block.animation-block .left {
+    left: -3rem;
 }
 
 .home .cta-block .left.left-text {
@@ -32,6 +45,11 @@
 .home .cta-block .right {
     float: right;
     width: 80%;
+    overflow: visible;
+}
+
+.home .cta-block.animation-block .right {
+    margin-top: -10rem;
 }
 
 .home .cta-block .right .wrapper {
@@ -229,6 +247,30 @@
     margin-bottom: 1rem;
 }
 
+@media screen and (max-width: 1200px) {
+    .home .cta-block.animation-block {
+        overflow: visible;
+    }
+
+    .home .cta-block.animation-block .left, .home .cta-block.animation-block .right {
+        float: none;
+        position: static;
+        width: 100%;
+    }
+
+    .home .cta-block.animation-block .right .wrapper img {
+        left: 0;
+    }
+
+    .home .cta-block.animation-block .right img {
+        position: static;
+    }
+
+    .home .cta-block.animation-block .right:before {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .home .cta-block .left {
         top: 0;
@@ -261,5 +303,20 @@
     .home .services-detail {
         grid-template-columns: 1fr;
         row-gap: 2rem
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .cta-block.animation-block {
+        margin-bottom: -100px;
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    * {
+        animation: none;
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important; 
+        transition-duration: 0.001ms !important;
     }
 }

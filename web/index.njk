@@ -13,7 +13,7 @@ navtitle: Home
     </p>
   </section>
 
-  <section class="cta-block narrow">
+  <section class="cta-block narrow animation-block">
     <div class="left">
       <h2>Learn more about us</h2>
       <ul>
@@ -23,12 +23,9 @@ navtitle: Home
       </ul>
     </div>
     <div class="right">
-      <div class="wrapper">
-        <img src={{home.headerImage.url}} alt={{home.headerImage.alt}} />
+      <div class="animation-wrapper" aria-label="6 nested circles on top of a multi-color background moving slowly around">
+        {% include "components/homeAnimation.njk" %}
       </div>
-      {% if home.headerImage.caption %}
-        <figcaption>{{home.headerImage.caption}}</figcaption>
-      {% endif %}
     </div>
   </section>
   
