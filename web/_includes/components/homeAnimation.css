@@ -504,22 +504,22 @@
   } 
 
   @media screen and (min-width: 1200px) {
-    .animation:hover .circle , .animation:hover .shadows {
+    .animation-block:hover .circle , .animation-block:hover .shadows {
         border-radius: 0;
         animation: none;
       }
       
-      .animation:hover .pattern {
+      .animation-block:hover .pattern {
         width: 770px;
         height: 510px;
       }
       
-      .animation:hover .circle-container {
+      .animation-block:hover .circle-container {
         top: 0;
         left: 0;
       }
       
-      .animation:hover .background {
+      .animation-block:hover .background {
         width: 770px;
         height: 510px;
       }
