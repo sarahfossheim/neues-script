@@ -541,7 +541,6 @@
         position: relative;
     }
     .animation .circle , .animation .shadows {
-        /* border-radius: 0; */
         animation: none;
     }
     
@@ -608,7 +607,6 @@
         position: relative;
     }
     .animation .circle , .animation .shadows {
-        /* border-radius: 0; */
         animation: none;
     }
     
