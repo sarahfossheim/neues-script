@@ -36,6 +36,9 @@
 
 .home .cta-block.animation-block .left {
     left: -3rem;
+    z-index: 5;
+    transform: translateZ(1000px);
+    opacity: 1;
 }
 
 .home .cta-block .left.left-text {
