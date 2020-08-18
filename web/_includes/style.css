@@ -90,12 +90,16 @@ h1, h2, h3, h4, h5 {
 
 .large-text {
     font-size: var(--font-size-xlarge);
-    line-height: 135%;
+    line-height: 1.35em;
+    line-height: var(--font-size-xlarge);
+    line-height: calc(var(--font-size-xlarge) + 0.7rem);
 }
 
 .medium-text {
     font-size: var(--font-size-large);
-    line-height: 135%;
+    line-height: 1.35em;
+    line-height: var(--font-size-large);
+    line-height: calc(var(--font-size-large) + 0.7rem);
 }
 
 figcaption {
