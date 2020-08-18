@@ -1,17 +1,19 @@
+.animation-wrapper {
+    width: 900px;
+    height: 700px;
+    position: relative;
+    top: 50px;
+}
+
 .animation {
     display: block;
     width: 750px;
     height: 475px;
     margin: 200px auto;
-    position: relative;
-  }
-  
-  /*.text {
     position: absolute;
-    top: 230px;
-    left: 270px;
-  }*/
-  
+    left: 0;
+    top: -50px;
+  }
   
   .background {
     background-color: #FFF;
@@ -33,7 +35,6 @@
     animation: rotate-background 25s infinite, color-background 120s infinite;
     -webkit-animation: rotate-background 25s infinite, color-background 120s infinite;
     transition: width 0.32s, height 0.35s;
-    -webkit-backface-visibility: hidden;
   }
   
   .circle-container {
@@ -43,7 +44,6 @@
     animation: rotate-container 25s 0.5s infinite;
     -webkit-animation: rotate-container 25s infinite;
     transition: 0.37s top, 0.33s left;
-    -webkit-backface-visibility: hidden;
     z-index: 2;
   }
   
@@ -53,7 +53,7 @@
     border: 1px solid #041F16;
     position: absolute;
     transition: border-radius 0.35s;
-    -webkit-backface-visibility: hidden;
+    z-index: 3;
   }
   
   .circle-outer {
@@ -160,6 +160,7 @@
     background-image: conic-gradient(
       from 160deg, rgba(255,255,255,0) 25%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0) 75%
     );
+    background-image: none;
     -webkit-animation: safari-overlay 2s forwards;
   }
   
@@ -167,6 +168,7 @@
     background-image: conic-gradient(
       from 220deg, rgba(255,255,255,0) 20%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 80%
     );
+    background-image: none;
     -webkit-animation: safari-overlay 2s forwards;
   }
   
@@ -176,6 +178,7 @@
     ), conic-gradient(
       from -50deg, rgba(255,255,255,0) 20%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 80%
     );
+    background-image: none;
     -webkit-animation: safari-overlay 2s forwards;
   }
   
@@ -183,6 +186,7 @@
     background-image: conic-gradient(
       from 100deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 70%
     );
+    background-image: none;
     -webkit-animation: safari-overlay 2s forwards;
   }
   
@@ -192,6 +196,7 @@
     ), conic-gradient(
       from -30deg, rgba(255,255,255,0) 35%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0) 65%
     );
+    background-image: none;
     -webkit-animation: safari-overlay 2s forwards;
   }
   
@@ -199,6 +204,7 @@
     background-image: conic-gradient(
       from -120deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0) 70%
     );
+    background-image: none;
     -webkit-animation: safari-overlay 2s forwards;
   }
   
@@ -344,19 +350,19 @@
   
   @-webkit-keyframes rotate-container {
     0% {
-      transform: rotateX(3deg);
+      transform: translateX(0px) translateY(0px);
     }
     25% {
-      transform: rotateX(24deg)
+      transform: translateX(10px) translateY(-5px);
     }
     50% {
-      transform: rotateX(3deg);
+      transform: translateX(3px) translateY(2px);
     }
     75% {
-      transform: rotateX(12deg);
+      transform: translateX(-7px) translateY(10px);
     }
     100% {
-      transform: rotateX(3deg);
+      transform: translateX(0px) translateY(0px);
     }
   }
      
@@ -485,7 +491,7 @@
   }
   
   
-  @keyframes safari-overlay {
+  /* @keyframes safari-overlay {
     0% {
       background-color: transparent;
     }
@@ -501,25 +507,25 @@
     100% {
       background-image: linear-gradient(transparent, transparent), linear-gradient(transparent, transparent);
     }
-  } 
+  }  */
 
   @media screen and (min-width: 1200px) {
-    .animation-block:hover .circle , .animation-block:hover .shadows {
+    .animation-wrapper:hover .circle , .animation-wrapper:hover .shadows {
         border-radius: 0;
         animation: none;
       }
       
-      .animation-block:hover .pattern {
+      .animation-wrapper:hover .pattern {
         width: 770px;
         height: 510px;
       }
       
-      .animation-block:hover .circle-container {
+      .animation-wrapper:hover .circle-container {
         top: 0;
         left: 0;
       }
       
-      .animation-block:hover .background {
+      .animation-wrapper:hover .background {
         width: 770px;
         height: 510px;
       }
