@@ -541,7 +541,7 @@
         position: relative;
     }
     .animation .circle , .animation .shadows {
-        border-radius: 0;
+        /* border-radius: 0; */
         animation: none;
     }
     
@@ -592,16 +592,23 @@
   }
 
   @media screen and (max-width: 1060px) {
+    .animation-wrapper {
+      width: 90vw;
+      height: 60vw;
+    }
+
     .animation {
         width: 90vw;
         height: 54vw;
+        position: relative;
+        top: -50px;
     }
 
     .animation .background {
         position: relative;
     }
     .animation .circle , .animation .shadows {
-        border-radius: 0;
+        /* border-radius: 0; */
         animation: none;
     }
     
@@ -652,10 +659,11 @@
   }
 
   @media screen and (max-width: 800px) {
+
       .animation {
           position: relative;
           height: 60vw;
-          top: -40px;
+          top: -90px;
       }
 
       .circle-outer .inner .inner .inner .inner .inner .inner .inner {
