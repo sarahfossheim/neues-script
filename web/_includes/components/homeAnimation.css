@@ -35,7 +35,6 @@
     animation: rotate-background 25s infinite, color-background 120s infinite;
     -webkit-animation: rotate-background 25s infinite, color-background 120s infinite;
     transition: width 0.32s, height 0.35s;
-    -webkit-backface-visibility: hidden;
   }
   
   .circle-container {
@@ -45,7 +44,6 @@
     animation: rotate-container 25s 0.5s infinite;
     -webkit-animation: rotate-container 25s infinite;
     transition: 0.37s top, 0.33s left;
-    -webkit-backface-visibility: hidden;
     z-index: 2;
   }
   
@@ -55,7 +53,7 @@
     border: 1px solid #041F16;
     position: absolute;
     transition: border-radius 0.35s;
-    -webkit-backface-visibility: hidden;
+    z-index: 3;
   }
   
   .circle-outer {
@@ -352,19 +350,10 @@
   
   @-webkit-keyframes rotate-container {
     0% {
-      transform: rotateX(3deg);
-    }
-    25% {
-      transform: rotateX(24deg)
-    }
-    50% {
-      transform: rotateX(3deg);
-    }
-    75% {
-      transform: rotateX(12deg);
+      background-image: none;
     }
     100% {
-      transform: rotateX(3deg);
+      background-image: none;
     }
   }
      
