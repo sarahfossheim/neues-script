@@ -152,6 +152,7 @@
     height: 250px;
     border-radius: 250px;
     position: absolute;
+    z-index: 4;
     transition: border-radius 0.35s;
     -webkit-animation: safari-overlay 2s forwards;
   }
