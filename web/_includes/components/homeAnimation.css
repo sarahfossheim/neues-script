@@ -152,6 +152,7 @@
     height: 250px;
     border-radius: 250px;
     position: absolute;
+    z-index: 4;
     transition: border-radius 0.35s;
     -webkit-animation: safari-overlay 2s forwards;
   }
@@ -160,7 +161,6 @@
     background-image: conic-gradient(
       from 160deg, rgba(255,255,255,0) 25%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0) 75%
     );
-    background-image: none;
     -webkit-animation: safari-overlay 2s forwards;
   }
   
@@ -168,7 +168,6 @@
     background-image: conic-gradient(
       from 220deg, rgba(255,255,255,0) 20%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 80%
     );
-    background-image: none;
     -webkit-animation: safari-overlay 2s forwards;
   }
   
@@ -178,7 +177,6 @@
     ), conic-gradient(
       from -50deg, rgba(255,255,255,0) 20%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 80%
     );
-    background-image: none;
     -webkit-animation: safari-overlay 2s forwards;
   }
   
@@ -186,7 +184,6 @@
     background-image: conic-gradient(
       from 100deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 70%
     );
-    background-image: none;
     -webkit-animation: safari-overlay 2s forwards;
   }
   
@@ -196,7 +193,6 @@
     ), conic-gradient(
       from -30deg, rgba(255,255,255,0) 35%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0) 65%
     );
-    background-image: none;
     -webkit-animation: safari-overlay 2s forwards;
   }
   
@@ -204,7 +200,6 @@
     background-image: conic-gradient(
       from -120deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0) 70%
     );
-    background-image: none;
     -webkit-animation: safari-overlay 2s forwards;
   }
   
@@ -541,7 +536,6 @@
         position: relative;
     }
     .animation .circle , .animation .shadows {
-        border-radius: 0;
         animation: none;
     }
     
@@ -592,16 +586,22 @@
   }
 
   @media screen and (max-width: 1060px) {
+    .animation-wrapper {
+      width: 90vw;
+      height: 60vw;
+    }
+
     .animation {
         width: 90vw;
         height: 54vw;
+        position: relative;
+        top: -50px;
     }
 
     .animation .background {
         position: relative;
     }
     .animation .circle , .animation .shadows {
-        border-radius: 0;
         animation: none;
     }
     
@@ -652,10 +652,11 @@
   }
 
   @media screen and (max-width: 800px) {
+
       .animation {
           position: relative;
           height: 60vw;
-          top: -40px;
+          top: -90px;
       }
 
       .circle-outer .inner .inner .inner .inner .inner .inner .inner {
