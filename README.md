@@ -37,7 +37,19 @@ Netlify automatically deploys new changes commited to `main` on GitHub. If you w
 - `_data`: fetches the data from Sanity
 - `_includes`: templates for components and pages, also include the CSS
 - `assets`: contains all the fonts
-- Files containing HTML end with `.njk`.
+
+### Code
+- Files containing HTML end with `.njk`
+- Styling is usually imported in the `.njk` files like this:
+```
+{% set css %}
+    {% include "<LINK TO CSS FILE>" %} 
+{% endset %}
+<style>
+    {{ css | cssmin | safe }}
+</style>
+```
+- New pages can get added in the root folder using `.njk` endings
 
 ### Animation
 The animation of the front page can be found in `_includes/components`.
