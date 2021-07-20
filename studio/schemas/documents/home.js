@@ -122,18 +122,16 @@ export default {
       validation: Rule => Rule.required()
     },
     {
-      name: 'greenBoxTitle',
+      name: 'gbTitle',
       type: 'string',
       title: 'Green Box Title',
-      description: 'Title of the green box',
-      validation: Rule => Rule.required()
+      description: 'Title of the green box'
     },
     {
-      name: 'greenBoxContent',
-      type: 'text',
+      name: 'gbContent',
+      type: 'bodyPortableText',
       title: 'Green Box Content',
-      description: 'Content of the green box',
-      validation: Rule => Rule.required()
+      description: 'Content of the green box'
     }
   ]
 }
