@@ -15,18 +15,14 @@ navtitle: Home
 
   <section class="cta-block narrow animation-block">
     <div class="left">
-      <h2>Learn more about us</h2>
-      <ul>
-        <li><a href="/services">Our services</a></li>
-        <li><a href="/projects">Past projects</a></li>
-        <li><a href="/about">What we do</a></li>
-      </ul>
+      <h2>{{ home.greenBoxTitle }}</h2>
+        {{ home.greenBoxContent }}
     </div>
     <div class="right">
         {% include "components/homeAnimation.njk" %}
     </div>
   </section>
-  
+
   <section class="projects">
     <div class="wide">
       <h2 class="narrow">{{home.projectsTitle}}</h2>
